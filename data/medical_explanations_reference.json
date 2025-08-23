@@ -1,0 +1,255 @@
+[
+  {
+    "id": 1,
+    "week_range": "3-4",
+    "topic": "neural_tube_formation",
+    "category": "development",
+    "simplified_explanation": "Your baby's brain and spinal cord foundation is being built through a precise folding and sealing process.",
+    "detailed_explanation": "Neural tube formation represents biological engineering at its most precise. During week 3, specialized cells create the neural plate - imagine laying the foundation and electrical grid for a sophisticated building. The edges elevate to form neural folds with a groove between them, like creating framework for a tunnel. Week 4 brings the critical 'zipper closure' where neural folds meet and fuse at the center line, advancing both directions simultaneously. This requires molecular coordination involving proteins like Sonic hedgehog. Every 8-10 hours, neuroepithelial cells divide, creating millions of precisely positioned cells that must align perfectly. The closed tube becomes the brain (forebrain for thinking/personality, midbrain for reflexes/coordination, hindbrain for vital functions) and spinal cord (the information superhighway connecting brain to body).",
+    "medical_reasoning": "Failed closure causes neural tube defects: anencephaly (incompatible with life) from failed head closure, or spina bifida (potential paralysis) from failed spine closure. This is why folic acid is critical - it provides cellular machinery for proper DNA synthesis during rapid cell division.",
+    "father_action_items": {
+      "before_pregnancy": ["Ensure partner takes 400-800mcg folic acid daily", "Avoid harmful substances", "Support healthy lifestyle"],
+      "during_process": ["Continue folic acid support", "Protect from teratogens", "Attend early appointments"]
+    },
+    "advocacy_script": null,
+    "related_warning_signs": {
+      "symptoms": ["Not applicable - occurs before symptoms visible"],
+      "related_conditions": ["Neural tube defects if process fails"]
+    }
+  },
+  {
+    "id": 2,
+    "week_range": "4-8", 
+    "topic": "organogenesis",
+    "category": "development",
+    "simplified_explanation": "All major organs form simultaneously in a coordinated biological construction project.",
+    "detailed_explanation": "Organogenesis is like constructing a modern city where teams work simultaneously on power grids (nervous system), plumbing (cardiovascular), ventilation (respiratory), and infrastructure (musculoskeletal). Week 4-5 prioritizes the cardiovascular system because it's the supply chain - the heart begins as two tubes that fold and fuse, establishing circulation by day 22. The respiratory system starts as a bud from the developing esophagus. Weeks 6-8 bring explosive development: the nervous system forms brain regions and neural pathways at 250,000 neurons per minute, the digestive system creates a functional tube with liver and pancreas budding off, kidneys form and begin producing urine. By week 8, your baby has transformed from a cluster of cells to a tiny human with every major organ system in place and functioning at basic levels.",
+    "medical_reasoning": "The timeline is inflexible because later systems depend on earlier ones. The cardiovascular system must establish circulation before organs grow large enough to need dedicated blood supply. Missing critical windows results in permanent structural abnormalities. This is why the embryo becomes a fetus at week 8 - all essential structures are formed.",
+    "father_action_items": {
+      "support_development": ["Ensure partner avoids all teratogens", "Support optimal nutrition", "Understand critical nature of these weeks", "Attend appointments together"],
+      "protect_from": ["Alcohol", "Smoking", "Medications not approved by doctor", "High temperatures", "Infections"]
+    },
+    "advocacy_script": "If prescribed new medication: 'My partner is 6 weeks pregnant during critical organ formation. Is this medication absolutely necessary? What are the risks to organ development? Are there safer alternatives?'",
+    "related_warning_signs": {
+      "symptoms": ["Morning sickness peak often coincides", "Extreme fatigue common"],
+      "warning_signs": ["Severe dehydration", "High fever", "Exposure to known teratogens"]
+    }
+  },
+  {
+    "id": 3,
+    "week_range": "5-6",
+    "topic": "cardiac_development", 
+    "category": "development",
+    "simplified_explanation": "Your baby's heart transforms from a simple tube to a four-chambered pump while never stopping beating.",
+    "detailed_explanation": "The heart begins as two parallel tubes that fuse into one, then performs an incredible feat - it loops to the right while beating continuously, like renovating a pump while it's running. This rightward loop positions the future chambers correctly. By week 6, endocardial cushions grow inward like walls being built inside a house, dividing the single tube into four chambers. Special temporary openings (foramen ovale between atria, ductus arteriosus bypassing lungs) allow blood to bypass the non-functional lungs. The heart beats about 110-160 times per minute - nearly twice your rate because the tiny size requires faster circulation to meet metabolic demands. All of this occurs while maintaining continuous blood flow - there's no shutting down for maintenance.",
+    "medical_reasoning": "Cardiac defects are the most common birth defects (1% of births) because the complexity leaves room for error. The temporary fetal openings must close after birth when lungs take over - patent ductus arteriosus and atrial septal defects occur when they don't. Understanding normal development explains why detailed anatomy scans examine the heart so thoroughly.",
+    "father_action_items": {
+      "emotional_support": ["First heartbeat viewing is emotional milestone", "Take video if allowed during ultrasound"],
+      "health_maintenance": ["Support heart-healthy nutrition", "Ensure folic acid continues", "Avoid secondhand smoke"]
+    },
+    "advocacy_script": "During ultrasound: 'Can you show us the heart chambers? Is the heart developing normally? Should we be concerned about any family history of heart conditions?'",
+    "related_warning_signs": {
+      "symptoms": ["Not directly observable"],
+      "screening": ["Nuchal translucency can indicate heart defects", "Anatomy scan details heart structure"],
+      "family_history": ["Mention any congenital heart defects in family"]
+    }
+  },
+  {
+    "id": 4,
+    "week_range": "18-20",
+    "topic": "movement_development",
+    "category": "development", 
+    "simplified_explanation": "Your baby's movements evolve from random twitches to coordinated actions that strengthen muscles and develop neural pathways.",
+    "detailed_explanation": "Early movements are like a computer running diagnostic tests - random firing of neurons that help establish connections. By week 18, movements become purposeful: reaching, grasping, thumb-sucking. Your baby is essentially doing prenatal CrossFit - stretching, kicking, rolling - which serves multiple purposes. It strengthens muscles, promotes bone density through mechanical stress, establishes neural pathways for post-birth movement, and prevents joints from fusing. The amniotic fluid provides perfect resistance training. By week 20, you'll feel distinct patterns - your baby has exercise and rest periods. Some babies are night owls (active when mom rests), others match maternal patterns. These movements also help shape the musculoskeletal system - bones remodel based on mechanical forces.",
+    "medical_reasoning": "Fetal movement indicates wellbeing - it requires adequate oxygenation, normal nervous system function, and sufficient amniotic fluid for free movement. Decreased movement can signal distress before other signs appear. Understanding normal patterns for YOUR baby (not averages) enables early problem detection.",
+    "father_action_items": {
+      "daily_routine": ["Establish movement counting time", "Learn baby's active periods", "Document patterns"],
+      "bonding": ["Talk during active times", "Partner's hand on belly during movement", "Play music and note responses"]
+    },
+    "advocacy_script": "If concerned about movement: 'My partner notices significantly decreased fetal movement from our baby's normal pattern. We need immediate assessment with NST or biophysical profile. This is not normal for our baby.'",
+    "related_warning_signs": {
+      "normal_variations": ["Anterior placenta muffles movement", "Patterns change as space decreases", "Sleep cycles cause quiet periods"],
+      "warning_signs": ["Less than 10 movements in 2 hours", "Significant pattern change", "No movement for 12+ hours"]
+    }
+  },
+  {
+    "id": 5,
+    "week_range": "23-24",
+    "topic": "viability_and_surfactant",
+    "category": "development",
+    "simplified_explanation": "Your baby reaches viability as lungs begin producing the substance that makes breathing possible.",
+    "detailed_explanation": "Surfactant is like WD-40 for the lungs - without it, the tiny air sacs (alveoli) would stick together like wet plastic bags. At the molecular level, surfactant reduces surface tension by 90%, allowing alveoli to stay partially open between breaths. Type II pneumocytes (specialized lung cells) begin producing this complex mixture of phospholipids and proteins around week 23-24, marking the threshold of viability. Production starts minimal - just enough that with massive medical support, survival becomes possible. The surfactant system includes four specific proteins (SP-A through SP-D) each with unique functions. It's also recycled - 90% is reabsorbed and reused, showing remarkable biological efficiency. By weeks 32-34, production reaches levels adequate for unassisted breathing.",
+    "medical_reasoning": "Understanding surfactant explains why each week matters so dramatically for premature babies. At 24 weeks, survival requires mechanical ventilation and synthetic surfactant. By 28 weeks, shorter support needed. By 34 weeks, most babies breathe independently. Antenatal corticosteroids can accelerate surfactant production by 48 hours if early delivery anticipated.",
+    "father_action_items": {
+      "knowledge_preparation": ["Understand NICU capabilities at your hospital", "Know surfactant replacement options", "Learn about antenatal steroids"],
+      "advocacy_preparation": ["If early delivery discussed, ask about steroids", "Understand your NICU level", "Know transport options if needed"]
+    },
+    "advocacy_script": "If preterm delivery threatened: 'What's our baby's lung maturity? Should we get antenatal corticosteroids? What respiratory support would be needed at this gestation? Should we transfer to a higher-level NICU?'",
+    "related_warning_signs": {
+      "viability_statistics": ["24 weeks: 60-70% survival with intensive care", "28 weeks: 90%+ survival", "32 weeks: 95%+ with minimal complications"],
+      "interventions": ["Antenatal steroids", "Synthetic surfactant", "Ventilation support"]
+    }
+  },
+  {
+    "id": 6,
+    "week_range": "28-32",
+    "topic": "brain_development_acceleration",
+    "category": "development",
+    "simplified_explanation": "Your baby's brain undergoes explosive growth, creating the foundation for consciousness, learning, and personality.",
+    "detailed_explanation": "The third trimester brain development is staggering in scope - your baby's brain adds 260% of its weight, creating 250,000 neurons per minute at peak production. The smooth brain surface develops elaborate folding patterns (gyri and sulci) that triple the surface area available for neurons. This isn't random - each fold appears in predictable sequence, creating the characteristic human brain appearance. Simultaneously, myelination accelerates - think of it as upgrading from dial-up to fiber optic internet. Myelin sheaths insulate neural pathways, increasing signal speed 100-fold. The visual cortex, auditory processing, and memory centers undergo rapid development. Your baby is not just growing but actively learning - recognizing voices, responding to music, establishing sleep-wake cycles, and even showing personality traits through activity patterns.",
+    "medical_reasoning": "This explosive growth explains why premature birth affects learning and behavior even without obvious brain injury. The ex-utero environment can't perfectly replicate the protected, optimally nourished intrauterine conditions. Each week in utero allows millions more neural connections, better myelination, and more sophisticated organization. Understanding this motivates maximum pregnancy maintenance when safely possible.",
+    "father_action_items": {
+      "stimulation_activities": ["Read stories daily - baby learns rhythm and tone", "Play varied music - classical to contemporary", "Talk directly to belly during quiet times", "Maintain consistent bedtime routines"],
+      "nutrition_support": ["Ensure DHA supplementation", "Support protein intake", "Encourage hydration for amniotic fluid"]
+    },
+    "advocacy_script": "For growth concerns: 'Is our baby's head circumference growing appropriately? This represents critical brain development. What can we do to optimize brain growth? Should we increase protein or DHA intake?'",
+    "related_warning_signs": {
+      "optimal_conditions": ["Adequate nutrition crucial", "Stress reduction important", "Avoid alcohol completely", "Ensure good sleep"],
+      "monitoring": ["Head circumference measurements", "Movement patterns indicate neural function"]
+    }
+  },
+  {
+    "id": 7,
+    "week_range": "32-37",
+    "topic": "final_maturation",
+    "category": "development",
+    "simplified_explanation": "All systems undergo final preparations for independent life outside the womb.",
+    "detailed_explanation": "These weeks are like a pre-flight checklist for a space mission - every system gets final testing and optimization. The lungs complete surfactant production and multiply alveoli from 50 million to eventual 300 million. The liver stocks iron reserves that must last until dietary iron begins at 6 months. The digestive system practices with 500ml of amniotic fluid daily, developing the coordination needed for feeding. The immune system receives a final boost of maternal antibodies - like downloading security updates before going online. Fat accumulation accelerates from 3.5% at 28 weeks to 15% at term, providing insulation and energy reserves. The brain adds 35% more weight, with crucial development in areas controlling temperature, breathing, and feeding coordination. Even fingernails grow past fingertips, and the skin transforms from translucent to opaque with protective vernix.",
+    "medical_reasoning": "Each system's final maturation explains specific premature infant challenges. 32-weekers often can't maintain temperature (incomplete fat/brain thermoregulation), 34-weekers may have feeding difficulties (immature suck-swallow-breathe coordination), and 36-weekers might have subtle learning issues from interrupted brain development. Understanding helps fathers appreciate why 'just a few weeks early' still matters.",
+    "father_action_items": {
+      "preparation_support": ["Encourage patience if anxious for delivery", "Support nutrition for final growth", "Maintain activity for optimal positioning", "Practice infant care skills"],
+      "monitoring": ["Track movements carefully", "Note any pattern changes", "Support all appointments"]
+    },
+    "advocacy_script": "For early delivery discussions: 'What specific systems might be affected at this gestation? Will baby need NICU time? What's the typical course for babies born at this stage? How can we optimize remaining time?'",
+    "related_warning_signs": {
+      "maturation_markers": ["Sustained weight gain", "Strong coordinated movements", "Practice breathing visible", "Vertex position achieved"],
+      "optimization": ["Every day matters", "Nutrition crucial", "Stress reduction important"]
+    }
+  },
+  {
+    "id": 8,
+    "week_range": "1-40",
+    "topic": "placental_function",
+    "category": "development",
+    "simplified_explanation": "The placenta acts as your baby's life support system, handling nutrition, waste, and hormone production.",
+    "detailed_explanation": "The placenta is biological engineering at its finest - a temporary organ that forms the interface between two genetically different organisms without rejection. It functions as lungs (oxygen/CO2 exchange), kidneys (waste filtration), liver (nutrient processing), and endocrine system (hormone production) all in one. The structure resembles a tree with branching villi that increase surface area to 15 square meters - the size of a small room. Maternal and fetal blood come within microns of each other but never mix, separated by a selective barrier that allows nutrients and oxygen through while blocking most harmful substances. It produces hormones including hCG (maintaining pregnancy), progesterone (preventing contractions), and human placental lactogen (ensuring nutrient availability). The placenta also transfers maternal antibodies, providing passive immunity. Blood flow reaches 600ml/minute by term - processing the entire fetal blood volume every minute.",
+    "medical_reasoning": "Placental function directly impacts fetal growth and development. Placental insufficiency causes growth restriction and can lead to stillbirth. Understanding placental importance helps fathers appreciate why maternal health, nutrition, and avoiding vasoconstrictors (smoking, certain drugs) profoundly affect baby's development. The placenta's efficiency explains how maternal conditions directly impact fetal wellbeing.",
+    "father_action_items": {
+      "support_placental_health": ["Encourage left-side sleeping", "Support nutrition and hydration", "Avoid secondhand smoke", "Promote stress reduction", "Ensure regular prenatal care"],
+      "understand_function": ["Nutrient delivery system", "Waste removal system", "Hormone factory", "Immune protection"]
+    },
+    "advocacy_script": "For placental concerns: 'Can you explain our placental function/position? Are there signs of insufficiency? What can we do to optimize placental health? Should we modify activity or nutrition?'",
+    "related_warning_signs": {
+      "monitoring_signs": ["Fundal height measurements", "Fetal growth tracking", "Movement patterns", "Amniotic fluid levels"],
+      "risk_factors": ["Smoking", "Hypertension", "Diabetes", "Advanced maternal age"]
+    }
+  },
+  {
+    "id": 9,
+    "week_range": "20-40",
+    "topic": "preeclampsia_pathophysiology",
+    "category": "warning_sign",
+    "simplified_explanation": "Preeclampsia is a dangerous cascade of blood vessel dysfunction that can rapidly progress from mild to life-threatening.",
+    "detailed_explanation": "Preeclampsia begins with abnormal placental implantation in early pregnancy, but symptoms don't appear until after 20 weeks. The poorly developed placental blood vessels release inflammatory factors (like sFlt-1 and endoglin) into maternal circulation. These factors damage the endothelium - the inner lining of all blood vessels - throughout the mother's body. This isn't just 'high blood pressure' - it's systematic organ dysfunction. The damaged vessels become leaky, causing protein to spill into urine and fluid to leak into tissues (edema). In the brain, this causes severe headaches and vision changes from cerebral edema and vasospasm. The liver can develop subcapsular bleeding (causing right upper quadrant pain). The kidneys reduce function, concentrating toxins. The blood clotting system activates inappropriately, consuming platelets. Left untreated, this cascade leads to eclampsia (seizures), HELLP syndrome (liver/blood crisis), or placental abruption.",
+    "medical_reasoning": "Preeclampsia affects 5-8% of pregnancies and remains a leading cause of maternal/fetal death worldwide. The only cure is delivery, regardless of gestational age. Understanding the systematic nature helps fathers recognize why seemingly common symptoms (headache, swelling) require immediate evaluation. Early detection and management save lives.",
+    "father_action_items": {
+      "daily_monitoring": ["Blood pressure if at risk", "Weight for sudden gains", "Swelling patterns", "Headache severity"],
+      "immediate_action": ["Severe headache = ER", "Vision changes = ER", "Upper right pain = ER", "Decreased fetal movement = ER"]
+    },
+    "advocacy_script": "For concerning symptoms: 'My partner has severe headache/vision changes/upper abdominal pain. We're concerned about preeclampsia and need immediate evaluation including blood pressure, urine protein, and labs for liver/kidney function and platelets. This could be serious.'",
+    "related_warning_signs": {
+      "warning_signs": ["Severe persistent headache", "Vision changes/spots/blurriness", "Upper right abdominal pain", "Sudden severe swelling face/hands", "Decreased urination"],
+      "risk_factors": ["First pregnancy", "Multiple gestation", "Chronic hypertension", "Diabetes", "Previous preeclampsia"]
+    }
+  },
+  {
+    "id": 10,
+    "week_range": "24-40",
+    "topic": "gestational_diabetes",
+    "category": "warning_sign",
+    "simplified_explanation": "Gestational diabetes affects how the body processes sugar, potentially causing complications for mother and baby.",
+    "detailed_explanation": "Gestational diabetes occurs when pregnancy hormones (especially human placental lactogen) create insulin resistance, and the pancreas can't produce enough insulin to overcome it. This typically appears around 24-28 weeks when hormone levels peak. The resulting high blood sugar affects both mother and baby. For baby: excess glucose crosses the placenta, forcing baby's pancreas to produce extra insulin. This acts as a growth hormone, causing macrosomia (large baby). After birth, baby's high insulin production continues but without mom's glucose supply, causing dangerous hypoglycemia. Long-term, these babies have higher obesity and diabetes risk. For mother: uncontrolled sugars increase infection risk, preeclampsia risk, and likelihood of C-section. The condition usually resolves after delivery but indicates 50% lifetime diabetes risk. Management involves diet modification, blood sugar monitoring, and possibly medication. Most women achieve good control with lifestyle changes alone.",
+    "medical_reasoning": "Gestational diabetes affects 10% of pregnancies. Understanding helps fathers support necessary dietary changes and monitoring. Good control minimizes complications - this isn't a pregnancy failure but a condition requiring management. Partner support significantly improves compliance and outcomes.",
+    "father_action_items": {
+      "dietary_support": ["Learn carbohydrate counting together", "Prepare balanced meals", "Remove temptations", "Exercise together after meals"],
+      "monitoring_help": ["Remind about blood sugar checks", "Record results", "Note patterns", "Attend dietitian appointments"]
+    },
+    "advocacy_script": "At diagnosis: 'Can you explain how gestational diabetes affects our baby? What are realistic blood sugar targets? Can we meet with a dietitian? What happens if diet doesn't control it?'",
+    "related_warning_signs": {
+      "monitoring_requirements": ["Blood sugar 4x daily initially", "Fasting and after meals", "Food diary helpful", "Weight/growth monitoring"],
+      "concerning_signs": ["Consistently high readings", "Ketones in urine", "Excessive thirst/urination", "Rapid weight gain"]
+    }
+  },
+  {
+    "id": 11,
+    "week_range": "28-40",
+    "topic": "kick_count_importance",
+    "category": "warning_sign",
+    "simplified_explanation": "Decreased fetal movement can be the first sign of distress, making kick counts a vital safety tool.",
+    "detailed_explanation": "Kick counts work because fetal movement directly reflects wellbeing - adequate oxygenation, normal nervous system function, and sufficient amniotic fluid. When problems develop, the fetus conserves energy by moving less, often before heart rate changes occur. The method is simple: during baby's typically active time, count movements until reaching 10. This should take less than 2 hours. Less than 10 movements in 2 hours requires immediate evaluation. Important: count ANY movement (kicks, rolls, jabs) except hiccups. Patterns matter more than exact numbers - YOUR baby's normal is what counts. Some babies move constantly, others have distinct active periods. Anterior placenta placement muffles perception but doesn't eliminate it. As pregnancy progresses, movements feel different (rolls vs jabs) due to space constraints, but frequency shouldn't significantly decrease. Studies show maternal perception of decreased movement preceded 55% of stillbirths, but many women delayed reporting concerns.",
+    "medical_reasoning": "Daily kick counts starting at 28 weeks can identify at-risk babies before irreversible compromise occurs. This simple, free intervention saves lives when mothers trust their instincts and providers respond appropriately. Fathers can participate by timing and recording, making this shared baby monitoring.",
+    "father_action_items": {
+      "daily_routine": ["Same time daily", "After meals when baby active", "Comfortable position", "Record results"],
+      "participation": ["Time the counts together", "Keep the log", "Notice patterns", "Validate concerns"]
+    },
+    "advocacy_script": "For decreased movement: 'My partner reports significant decrease in fetal movement from our baby's established pattern. We've done kick counts and got less than 10 in 2 hours. We need immediate fetal assessment - this is not normal for our baby. Please don't dismiss our concerns.'",
+    "related_warning_signs": {
+      "normal_patterns": ["More active after meals", "Active when mom rests", "Individual patterns vary", "Space changes movement type"],
+      "immediate_evaluation_needed": ["Less than 10 in 2 hours", "Significant pattern change", "No movement half day", "Maternal concern even if 'counts normal'"]
+    }
+  },
+  {
+    "id": 12,
+    "week_range": "6-10",
+    "topic": "hyperemesis_gravidarum",
+    "category": "warning_sign",
+    "simplified_explanation": "Severe pregnancy vomiting that prevents adequate nutrition requires medical intervention to protect mother and baby.",
+    "detailed_explanation": "Hyperemesis gravidarum (HG) goes far beyond normal morning sickness - it's intractable vomiting preventing adequate nutrition and hydration. While morning sickness affects 70-80% of pregnancies, HG affects 0.5-2% and can be life-threatening. The pathophysiology involves extreme sensitivity to pregnancy hormones (hCG, estrogen), possibly genetic predisposition, and potential H. pylori involvement. Unlike morning sickness that improves by 12-14 weeks, HG often persists throughout pregnancy. Diagnosis criteria: persistent vomiting preventing intake, 5%+ weight loss from pre-pregnancy, dehydration signs, electrolyte imbalances, and ketonuria. Complications include Wernicke encephalopathy (thiamine deficiency causing brain damage), central pontine myelinolysis (from rapid sodium correction), Mallory-Weiss tears (esophageal bleeding), and fetal growth restriction. Treatment requires IV fluids, electrolyte correction, antiemetics, and sometimes parenteral nutrition. Early aggressive treatment improves outcomes.",
+    "medical_reasoning": "HG causes 285,000 hospital admissions annually in the US. Without treatment, maternal mortality was 159/1000 in the 1930s. Modern treatment makes death rare but morbidity remains high. Partners witnessing HG often feel helpless - understanding the severity validates the need for aggressive medical intervention.",
+    "father_action_items": {
+      "immediate_needs": ["Track all intake/output", "Weight daily", "Monitor urine color", "Note ketones if testing"],
+      "support_strategies": ["Believe severity - not exaggerating", "Advocate for treatment", "Handle all food smells", "Create trigger-free zones"]
+    },
+    "advocacy_script": "At ER/appointment: 'My partner has been unable to keep down fluids for [X] hours and has lost [X]% body weight. She needs IV hydration and antiemetics. This appears to be hyperemesis gravidarum, not typical morning sickness. Please check electrolytes and ketones.'",
+    "related_warning_signs": {
+      "hg_vs_morning_sickness": ["Can't keep water down", "Weight loss >5%", "Dehydration signs", "Ketones in urine", "Requires medical treatment"],
+      "complications": ["Wernicke encephalopathy", "Esophageal tears", "Severe electrolyte imbalance"]
+    }
+  },
+  {
+    "id": 13,
+    "week_range": "37-42",
+    "topic": "post_dates_monitoring",
+    "category": "warning_sign",
+    "simplified_explanation": "Going past due date requires careful monitoring as placental function gradually decreases.",
+    "detailed_explanation": "Post-dates pregnancy (beyond 42 weeks) occurs in 5-10% of pregnancies, though many are dating errors. The concern isn't arbitrary - placental function gradually decreases after 40 weeks. The aging placenta develops calcifications and infarcts, reducing efficiency. Amniotic fluid decreases as fetal kidney function changes and less fluid is swallowed. This oligohydramnios increases cord compression risk. The baby continues growing, potentially becoming macrosomic, while the skull bones harden, making molding during birth more difficult. Meconium passage becomes more likely, risking aspiration. Post-dates babies have less subcutaneous fat, dry peeling skin, and longer nails - signs of prolonged gestation. Stillbirth risk doubles from 40 to 42 weeks (from 2-3/1000 to 4-7/1000). Monitoring includes non-stress tests (NST) checking heart rate patterns, biophysical profiles (BPP) assessing movement/breathing/fluid, and sometimes Doppler studies of placental blood flow. Most providers recommend delivery by 42 weeks.",
+    "medical_reasoning": "Understanding post-dates risks helps fathers support decision-making about induction versus waiting. The gradual nature of risk explains why monitoring intensifies - catching problems early allows intervention before compromise. Each day's decision balances risks of continuing pregnancy against induction.",
+    "father_action_items": {
+      "daily_support": ["Track movements extra carefully", "Support monitoring appointments", "Shield from others' pressure", "Validate frustration with waiting"],
+      "decision_support": ["Research induction methods", "Understand Bishop score", "Know success rates", "Support her choice"]
+    },
+    "advocacy_script": "At post-dates appointment: 'What specific monitoring do you recommend? How do we balance waiting versus induction risks? What signs would mandate immediate delivery? Can you explain our Bishop score and induction success likelihood?'",
+    "related_warning_signs": {
+      "monitoring_methods": ["NST 2x weekly", "BPP weekly", "Amniotic fluid index", "Daily kick counts crucial"],
+      "delivery_indicators": ["Decreased movement", "Low fluid", "Non-reactive NST", "BPP <6"]
+    }
+  },
+  {
+    "id": 14,
+    "week_range": "1-40",
+    "topic": "miscarriage_understanding",
+    "category": "warning_sign",
+    "simplified_explanation": "Early pregnancy loss is common but devastating, requiring both medical attention and emotional support.",
+    "detailed_explanation": "Miscarriage affects 10-20% of known pregnancies, with 80% occurring before 12 weeks. Most result from chromosomal abnormalities incompatible with life - nature's quality control, not parental failure. The process involves declining hormone levels triggering uterine contractions and cervical dilation. Warning signs include bleeding (though 25% with first trimester bleeding continue normally), cramping exceeding menstrual pain, and tissue passage. Types include threatened (bleeding but closed cervix), inevitable (open cervix), incomplete (partial passage), complete (all tissue passed), and missed (fetal demise without symptoms). Diagnosis uses ultrasound checking for heartbeat and hCG levels - should double every 48-72 hours early on. Management options: expectant (wait for natural passage), medical (misoprostol), or surgical (D&C). Physical recovery takes 4-6 weeks; emotional recovery varies greatly. Future pregnancy success rates remain excellent - 85% have successful next pregnancy. Understanding helps fathers support both physical and emotional needs while processing their own grief.",
+    "medical_reasoning": "Miscarriage remains societally minimized despite profound impact. Fathers often feel pressure to 'be strong' while grieving their own loss. Understanding the medical aspects helps separate fact from self-blame. Most miscarriages cannot be prevented - they're not caused by exercise, sex, or stress.",
+    "father_action_items": {
+      "immediate_support": ["Believe her pain", "Go to appointments", "Handle logistics", "Allow your grief too"],
+      "ongoing_support": ["Remember due date", "Acknowledge baby's existence", "Seek counseling together", "Support trying again timeline"]
+    },
+    "advocacy_script": "At ER: 'My partner is experiencing heavy bleeding and severe cramping at [X] weeks pregnant. We're concerned about miscarriage and need evaluation. She's in significant pain and we need to know what's happening.'",
+    "related_warning_signs": {
+      "types_and_symptoms": ["Bleeding doesn't always mean loss", "Cramping with bleeding concerning", "Tissue passage confirms", "No symptoms possible (missed)"],
+      "recovery_needs": ["Physical: bleeding, cramping weeks", "Emotional: grief is real", "Future: usually can try after 1-2 cycles"]
+    }
+  }
+]

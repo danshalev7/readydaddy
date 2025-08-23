@@ -1,0 +1,563 @@
+[
+  {
+    "id": 1,
+    "week": "1",
+    "summary": "Menstrual period occurring, body preparing hormonally for potential conception",
+    "symptoms": {
+      "menstrual_bleeding": true,
+      "hormonal_fluctuation": true,
+      "body_preparation": true,
+      "uterine_lining_shedding": true
+    },
+    "suggested_action": "Support healthy lifestyle choices for conception preparation. Understand that hormonal fluctuations during menstruation can affect mood and energy. Begin prenatal vitamins together - your involvement makes it feel like a team effort. Create a stress-free environment as stress hormones can affect fertility. Track menstrual cycle together if trying to conceive - apps can help predict fertile windows."
+  },
+  {
+    "id": 2,
+    "week": "2",
+    "summary": "Ovulation window - optimal fertility period with multiple body changes supporting conception",
+    "symptoms": {
+      "ovulation_symptoms": true,
+      "cervical_mucus_changes": true,
+      "fertile_window": true,
+      "libido_increase": "possible",
+      "mild_cramping": "possible",
+      "basal_temperature_rise": true
+    },
+    "suggested_action": "Understand ovulation involves complex hormonal orchestration - LH surge triggers egg release while estrogen optimizes conditions for sperm survival. Cervical mucus becomes thin and stretchy (like egg whites) to facilitate sperm transport. Some women experience mittelschmerz (ovulation pain) on one side. Maintain intimacy without pressure - stress can interfere with conception. Support healthy habits: both partners benefit from good nutrition, exercise, and avoiding tobacco/excessive alcohol."
+  },
+  {
+    "id": 3,
+    "week": "3",
+    "summary": "Possible implantation occurring - embryo burrowing into uterine wall if conception successful",
+    "symptoms": {
+      "implantation_spotting": "possible",
+      "mild_cramping": "possible",
+      "early_hormonal_changes": "beginning",
+      "breast_sensitivity": "minimal",
+      "fatigue": "slight"
+    },
+    "suggested_action": "Implantation involves the blastocyst literally embedding into the uterine lining, sometimes causing light spotting (different from period - lighter, shorter). hCG production begins immediately upon implantation but takes days to reach detectable levels. Be patient with early testing - testing too early leads to false negatives and anxiety. Support emotional uncertainty of not knowing. Continue healthy habits as neural tube forms before missed period."
+  },
+  {
+    "id": 4,
+    "week": "4",
+    "summary": "Missed period triggers awareness, early symptoms emerge from rising hormones",
+    "symptoms": {
+      "missed_period": true,
+      "breast_tenderness": "increasing",
+      "nausea": "possible",
+      "fatigue": "noticeable",
+      "frequent_urination": "beginning",
+      "mood_changes": true,
+      "implantation_complete": true
+    },
+    "suggested_action": "Understand hCG doubles every 48-72 hours, driving symptom intensity. Breast tenderness results from estrogen/progesterone preparing mammary tissue. Fatigue is profound - body is building a placenta while maintaining normal functions. Take pregnancy test together for shared moment. Immediately stop alcohol/smoking - neural tube is forming NOW. Schedule prenatal appointment promptly. Be patient with mood swings - hormones are real physical changes, not choices."
+  },
+  {
+    "id": 5,
+    "week": "5",
+    "summary": "Hormones surge dramatically as placenta develops, morning sickness often begins",
+    "symptoms": {
+      "morning_sickness": "beginning",
+      "breast_tenderness": "significant",
+      "extreme_fatigue": true,
+      "frequent_urination": true,
+      "food_aversions": "developing",
+      "heightened_smell": true,
+      "mood_swings": "increasing"
+    },
+    "suggested_action": "Morning sickness (poorly named - can occur anytime) results from rapidly rising hCG and estrogen. Understand she's not being difficult about food - aversions are evolutionary protection against potentially harmful foods. Fatigue is like having flu while running marathon - body is working incredibly hard. Take over cooking (smells trigger nausea), shop for whatever she can tolerate, keep crackers everywhere. Small, frequent meals help. Ginger and B6 are evidence-based remedies. Validate her experience - symptoms are real and challenging."
+  },
+  {
+    "id": 6,
+    "week": "6",
+    "summary": "Peak symptom period - hormones at maximum rate of increase, morning sickness often worst",
+    "symptoms": {
+      "morning_sickness": "peak",
+      "extreme_fatigue": true,
+      "breast_changes": "significant",
+      "mood_swings": true,
+      "food_aversions": "strong",
+      "constipation": "beginning",
+      "dizziness": "possible"
+    },
+    "suggested_action": "This is typically the hardest week physically. hCG levels approaching peak cause maximum nausea. Progesterone slows digestion (causing constipation) to maximize nutrient absorption. Blood volume increasing but red blood cells lag, causing dizziness. Provide maximum support: handle all meals, shopping, household tasks. Create nausea kit: ginger candy, crackers, Sea-Bands, peppermint. Ensure hydration - dehydration worsens symptoms. Watch for hyperemesis warning signs: can't keep fluids down, weight loss, decreased urination. Don't minimize her struggle - this is genuinely difficult."
+  },
+  {
+    "id": 7,
+    "week": "7",
+    "summary": "Continued intense symptoms, food issues peak, emotional volatility from hormones",
+    "symptoms": {
+      "morning_sickness": "continuing",
+      "food_aversions": true,
+      "food_cravings": "possible",
+      "emotional_changes": true,
+      "breast_growth": true,
+      "bloating": true,
+      "excess_saliva": "possible"
+    },
+    "suggested_action": "Understand cravings/aversions have evolutionary basis - body seeking needed nutrients while avoiding potential toxins. Emotional changes are hormonal, not personal - progesterone affects neurotransmitters. Excess saliva (ptyalism) is rare but real symptom. Support means flexibility - what worked yesterday may repulse today. Stock variety of bland foods. Handle all strong-smell tasks. Create calm environment - stress worsens symptoms. Validate emotions without trying to 'fix' them. Her body is doing extraordinary work."
+  },
+  {
+    "id": 8,
+    "week": "8",
+    "summary": "Often worst symptom week as hormones peak before placenta takeover",
+    "symptoms": {
+      "morning_sickness": "severe",
+      "intense_fatigue": true,
+      "frequent_urination": "increasing",
+      "breast_changes": "continuing",
+      "constipation": true,
+      "headaches": "possible",
+      "mild_cramping": "normal"
+    },
+    "suggested_action": "Peak hormone week before placenta assumes production. Understand this is temporary - most women feel better by week 12. Frequent urination from increased blood flow to kidneys plus growing uterus pressure. Constipation from progesterone requires fiber, fluids, movement. Support by assuming all household responsibilities without being asked. Encourage rest - fatigue is body's signal to slow down. Keep perspective: symptoms indicate healthy pregnancy. Watch for severe headaches (blood pressure concern) or severe cramping."
+  },
+  {
+    "id": 9,
+    "week": "9",
+    "summary": "Possible symptom improvement as hormones begin stabilizing",
+    "symptoms": {
+      "morning_sickness": "potentially_improving",
+      "energy": "slightly_better",
+      "appetite": "variable",
+      "mood": "stabilizing",
+      "visible_veins": true,
+      "breast_changes": "continuing"
+    },
+    "suggested_action": "Placenta beginning to take over hormone production from corpus luteum, often bringing symptom relief. Visible veins show 50% blood volume increase already occurring. Appetite may return sporadically - support food experimentation. Energy improvement may be subtle - don't expect sudden recovery. Continue supportive care while watching for gradual improvements. Celebrate small victories: keeping meal down, energy for short walk. Remind her that most women feel significantly better soon."
+  },
+  {
+    "id": 10,
+    "week": "10",
+    "summary": "Energy often returning, morning sickness easing for many women",
+    "symptoms": {
+      "morning_sickness": "easing",
+      "energy": "improving",
+      "appetite": "returning",
+      "weight_gain": "beginning",
+      "emotional_relief": true,
+      "ligament_stretching": "possible"
+    },
+    "suggested_action": "Hormone levels stabilizing at sustainable levels. HCG declining from peak reduces nausea. Energy returns gradually - support increased activity without overdoing. Weight gain beginning is positive sign after possible first trimester loss. Round ligament pain (sharp pulling sensations) normal from uterus growing. Emotional relief common as symptoms improve. Continue nutritional support as appetite returns. Begin planning second trimester activities while energy improves."
+  },
+  {
+    "id": 11,
+    "week": "11",
+    "summary": "Visible changes beginning - tiny bump possible, significant symptom improvement common",
+    "symptoms": {
+      "energy": "much_better",
+      "morning_sickness": "resolving",
+      "small_bump": "possible",
+      "skin_changes": true,
+      "hair_thicker": "beginning",
+      "emotional_stability": "improving"
+    },
+    "suggested_action": "Uterus rising above pubic bone may create small bump. Skin changes include darkening nipples, possible linea nigra (dark line on abdomen). Hair enters growth phase - less shedding creates thicker appearance. Support body image as changes become visible. Take first bump photos even if barely visible. Shop for comfortable clothes together - regular clothes getting tight. Celebrate symptom improvements while remaining attentive to needs."
+  },
+  {
+    "id": 12,
+    "week": "12",
+    "summary": "Major milestone - end of first trimester brings relief and renewed energy",
+    "symptoms": {
+      "morning_sickness": "mostly_resolved",
+      "energy": "returned",
+      "appetite": "normal",
+      "mood": "positive",
+      "pregnancy_glow": "beginning",
+      "libido": "possibly_returning"
+    },
+    "suggested_action": "Miscarriage risk drops dramatically - psychological relief significant. 'Pregnancy glow' from increased blood volume and oil production. Libido may return as nausea resolves and energy improves. Support announcement decisions - some wait until now to share widely. Plan celebration of milestone. Encourage continued prenatal vitamins as nausea improves. Maintain intimate connection as both partners adjust to pregnancy reality. Document journey together."
+  },
+  {
+    "id": 13,
+    "week": "13",
+    "summary": "Second trimester begins - honeymoon period of pregnancy for many",
+    "symptoms": {
+      "energy": "high",
+      "appetite": "good",
+      "mood": "positive",
+      "physical_comfort": "improved",
+      "visible_pregnancy": "beginning",
+      "skin_glowing": true
+    },
+    "suggested_action": "Welcome to easier trimester! Energy and mood typically best of entire pregnancy. Growing bump makes pregnancy 'real' to others. Support increased activity and social engagement. Plan babymoon travel while comfortable. Begin regular bump photography. Address unsolicited advice from others together. Enjoy renewed intimacy if desired. Make most of energy for preparation tasks. Celebrate feeling good after difficult first trimester."
+  },
+  {
+    "id": 14,
+    "week": "14",
+    "summary": "Energy surge common, body adjusting well to pregnancy hormones",
+    "symptoms": {
+      "energy": "excellent",
+      "hair": "thicker",
+      "skin": "clearer",
+      "sexual_desire": "returning",
+      "appetite": "healthy",
+      "round_ligament_pain": "beginning",
+      "visible_bump": true
+    },
+    "suggested_action": "Estrogen creates hair/skin improvements. Increased blood flow enhances arousal and sensitivity. Round ligament pain (sharp pulling) normal from uterus stretching. Support healthy weight gain as appetite normalizes. Encourage exercise - benefits mood, sleep, and delivery. Address intimacy openly - physical and emotional needs may change. Begin nursery planning while energy high. Research childbirth education options together."
+  },
+  {
+    "id": 15,
+    "week": "15",
+    "summary": "Potential increased libido, digestive changes from growing uterus",
+    "symptoms": {
+      "sexual_desire": "increased",
+      "orgasms": "more_intense",
+      "heartburn": "beginning",
+      "gas": true,
+      "shortness_of_breath": "mild",
+      "energy": "good"
+    },
+    "suggested_action": "Increased pelvic blood flow enhances sexual response - orgasms may be easier/intense. Growing uterus pushes stomach upward causing heartburn. Progesterone relaxes all smooth muscle including digestive tract. Support intimacy needs - creativity may be needed for comfort. Stock antacids (Tums provide calcium too). Small, frequent meals help heartburn. Encourage left-side sleeping position. Plan romantic gestures while she feels good."
+  },
+  {
+    "id": 16,
+    "week": "16",
+    "summary": "Back pain beginning from posture changes, bump clearly visible",
+    "symptoms": {
+      "back_pain": "beginning",
+      "posture_changes": true,
+      "pregnancy_glow": true,
+      "belly": "obviously_showing",
+      "breast_growth": "continuing",
+      "possible_movement": true
+    },
+    "suggested_action": "Center of gravity shifting forward strains back muscles. Relaxin hormone loosens ligaments for delivery but decreases stability. Possible first movement sensations (quickening) especially in second pregnancies. Support with proper lifting techniques, prenatal massage, good shoes. Help maintain good posture. Swimming excellent for back relief. Celebrate visible pregnancy together. Watch for movement together during quiet times."
+  },
+  {
+    "id": 17,
+    "week": "17",
+    "summary": "Skin stretching sensations, body producing more fluids",
+    "symptoms": {
+      "skin_stretching": true,
+      "itchy_belly": "possible",
+      "increased_discharge": true,
+      "sweating_more": true,
+      "nasal_congestion": "possible",
+      "bleeding_gums": "possible"
+    },
+    "suggested_action": "Skin stretching as bump grows can cause itching (avoid hot showers which worsen). Increased discharge is protective mechanism. Higher blood volume causes increased sweating and nasal congestion. Bleeding gums from increased blood flow common. Daily moisturizing routine helps comfort (not proven to prevent stretch marks). Support hygiene needs sensitively. Dental care important - gum disease linked to preterm birth. Stay hydrated together."
+  },
+  {
+    "id": 18,
+    "week": "18",
+    "summary": "Must change sleep position, potentially feeling first movements",
+    "symptoms": {
+      "side_sleeping_required": true,
+      "first_movements": "possible",
+      "anatomy_scan_scheduled": true,
+      "energy": "good",
+      "hip_pain": "beginning"
+    },
+    "suggested_action": "Can no longer sleep on back - uterus compresses vena cava reducing blood flow. First movements feel like bubbles, flutters, or taps. Anatomy scan anxiety normal. Create comfortable side-sleeping setup with pillows. Spend quiet time together feeling for movements. Prepare anatomy scan questions. Support anxiety about baby's development. Continue exercise modifications. Plan celebration if learning gender."
+  },
+  {
+    "id": 19,
+    "week": "19",
+    "summary": "Bump definitely visible, regular movement patterns developing",
+    "symptoms": {
+      "visible_bump": true,
+      "regular_movements": "beginning",
+      "round_ligament_pain": true,
+      "increased_appetite": true,
+      "balance_changes": "beginning"
+    },
+    "suggested_action": "Movement patterns become predictable - baby has active/quiet periods. Appetite increases to support rapid growth. Balance affected by center of gravity changes. Learn baby's movement patterns together. Support increased nutritional needs. Be patient with clumsiness. Take weekly bump photos. Handle intrusive public comments together. Research baby gear but wait to purchase. Enjoy this energetic period."
+  },
+  {
+    "id": 20,
+    "week": "20",
+    "summary": "Halfway point - fundal height at navel, consistent movements",
+    "symptoms": {
+      "fundal_height_at_navel": true,
+      "strong_movements": true,
+      "excellent_appetite": true,
+      "energy": "still_good",
+      "back_pain": "increasing",
+      "leg_cramps": "beginning"
+    },
+    "suggested_action": "Major milestone reaching halfway! Fundal height measurement begins. Movements strong enough for partner to feel. Leg cramps from circulation changes and mineral needs. Celebrate halfway point meaningfully. Feel movements together daily. Provide calf massages for cramps. Ensure adequate calcium/magnesium. Support continued activity level. Plan babymoon if desired. Document journey together."
+  },
+  {
+    "id": 21,
+    "week": "21",
+    "summary": "Braxton Hicks may begin, body practicing for labor",
+    "symptoms": {
+      "braxton_hicks": "beginning",
+      "leg_cramps": "frequent",
+      "stretch_marks": "possible",
+      "body_image_changes": true,
+      "varicose_veins": "possible",
+      "swelling": "mild"
+    },
+    "suggested_action": "Braxton Hicks are practice contractions - irregular, painless uterine tightening. Leg cramps often strike at night from electrolyte imbalances. Stretch marks affect 50-90% genetically. Learn to identify Braxton Hicks together. Provide immediate leg cramp relief. Support body image with specific compliments about strength/capability. Encourage feet elevation for swelling. Maintain intimacy creatively. Focus on amazing feat body is accomplishing."
+  },
+  {
+    "id": 22,
+    "week": "22",
+    "summary": "Belly button changes, breathing becomes slightly restricted",
+    "symptoms": {
+      "belly_button_flattening": true,
+      "breathing_changes": "mild",
+      "bleeding_gums": "common",
+      "breast_growth": "continuing",
+      "movement_strong": true,
+      "energy": "decreasing_slightly"
+    },
+    "suggested_action": "Uterus pushes belly button out or flat. Diaphragm compressed causing mild breathlessness. Dental hygiene crucial as pregnancy hormones affect gums. Plan maternity photos while energy good. Support breathing comfort with good posture. Schedule dental cleaning. Continue date nights. Research major baby purchases together. Prepare for third trimester energy decline. Enjoy current comfort level."
+  },
+  {
+    "id": 23,
+    "week": "23",
+    "summary": "Viability week brings anxiety and relief, body preparing for third trimester",
+    "symptoms": {
+      "sleep_disruption": "beginning",
+      "baby_active_periods": true,
+      "colostrum_forming": "possible",
+      "skin_changes": "continuing",
+      "back_pain": true,
+      "mood_changes": "possible"
+    },
+    "suggested_action": "Understanding viability (baby could survive with help) brings complex emotions. Baby's activity when mom rests can disrupt sleep. Colostrum (early milk) may leak slightly. Support sleep with multiple pillows, white noise, cool room. Understand baby's reverse schedule is normal. Provide breast pads if needed. Address viability anxieties together. Continue financial planning. Maintain exercise routine."
+  },
+  {
+    "id": 24,
+    "week": "24",
+    "summary": "Glucose test anxiety, stronger movements, possible swelling beginning",
+    "symptoms": {
+      "glucose_test": true,
+      "stronger_kicks": true,
+      "swelling_beginning": "possible",
+      "carpal_tunnel_symptoms": "possible",
+      "continued_energy": "variable"
+    },
+    "suggested_action": "Glucose test screens for gestational diabetes affecting 10% of pregnancies. Kicks stronger and visible from outside. Fluid retention can cause hand/feet swelling and carpal tunnel symptoms. Support through unpleasant glucose test. Monitor swelling - sudden increases concerning. Celebrate strong movements together. Watch for preeclampsia signs: headaches, vision changes, upper abdominal pain. Continue birth preparation research."
+  },
+  {
+    "id": 25,
+    "week": "25",
+    "summary": "Bathroom trips increase, possible hemorrhoids from pressure",
+    "symptoms": {
+      "frequent_urination": "intense",
+      "constipation": true,
+      "hemorrhoids": "possible",
+      "pelvic_pressure": "increasing",
+      "continued_movement": true,
+      "energy": "decreasing"
+    },
+    "suggested_action": "Growing baby compresses bladder reducing capacity. Constipation plus pressure can cause hemorrhoids. Pelvic floor under increasing strain. Map bathroom locations when out. Provide hemorrhoid relief (witch hazel, sitz baths). Increase fiber and water intake together. Begin birth plan discussions. Support comfort measures. Understand physical discomfort is significant. Maintain patience and empathy."
+  },
+  {
+    "id": 26,
+    "week": "26",
+    "summary": "Sleep challenges increase, forgetfulness from 'pregnancy brain'",
+    "symptoms": {
+      "sleep_difficulty": true,
+      "pregnancy_brain": true,
+      "restless_legs": "possible",
+      "continued_swelling": true,
+      "blood_pressure_monitoring": true,
+      "movement_patterns": "established"
+    },
+    "suggested_action": "'Pregnancy brain' results from hormones, sleep deprivation, and preoccupation. Blood pressure monitoring important as preeclampsia risk increases. Baby's movements have predictable patterns. Create organizational systems to combat forgetfulness. Support sleep hygiene routine. Monitor blood pressure if recommended. Learn baby's normal movement patterns. Encourage continued activity for mood/sleep. Address work concerns together."
+  },
+  {
+    "id": 27,
+    "week": "27",
+    "summary": "Multiple symptoms accumulate, third trimester preparation urgent",
+    "symptoms": {
+      "leg_cramps": "frequent",
+      "hemorrhoids": "likely",
+      "backache": "constant",
+      "fatigue_returning": true,
+      "braxton_hicks": "increasing",
+      "emotional_preparation": true
+    },
+    "suggested_action": "End of 'honeymoon' trimester brings reality of approaching delivery. Multiple physical discomforts accumulate. Emotional processing of parenthood intensifies. Provide comprehensive comfort support - massages, positioning help, symptom relief. Complete major decisions now. Finalize work arrangements. Increase household support. Validate mixed emotions about pregnancy ending. Prepare for third trimester challenges together."
+  },
+  {
+    "id": 28,
+    "week": "28",
+    "summary": "Third trimester exhaustion and discomfort begin",
+    "symptoms": {
+      "extreme_fatigue": true,
+      "shortness_of_breath": true,
+      "heartburn": "intense",
+      "back_pain": "significant",
+      "frequent_braxton_hicks": true,
+      "swelling": "increasing",
+      "insomnia": true
+    },
+    "suggested_action": "Welcome to third trimester - the marathon's final miles. Every system working overtime to support baby's rapid growth. Relaxin hormone peaks, loosening all joints causing instability and pain. Heartburn from stomach compression requires small frequent meals, elevated sleeping. Can't breathe deeply as uterus crowds diaphragm. Create elaborate pillow fort for sleep comfort. Take over ALL household tasks without being asked. Provide constant position changes. Stock antacids everywhere. Understand exhaustion is profound - growing baby takes enormous energy. Begin kick counts together."
+  },
+  {
+    "id": 29,
+    "week": "29",
+    "summary": "Sleep severely disrupted by discomfort and baby's schedule",
+    "symptoms": {
+      "severe_insomnia": true,
+      "baby_active_at_night": true,
+      "leg_cramps": "nightly",
+      "hip_pain": true,
+      "shortness_of_breath": "worse_lying_down",
+      "anxiety_increasing": true
+    },
+    "suggested_action": "Baby's awake when mom's still because daytime movement rocks them to sleep. Now stillness = party time. Leg cramps from electrolyte imbalances and circulation issues. Hip pain from relaxin and pressure. Can't breathe lying flat. Be ready for 2am leg cramp duty. Create perfect sleep environment even if she can't sleep. Validate frustration with baby's schedule. Practice labor comfort techniques. Address birth anxieties openly. Consider separate beds for better rest - it's temporary and practical, not relationship failure."
+  },
+  {
+    "id": 30,
+    "week": "30",
+    "summary": "Balance severely affected, emotional vulnerability from discomfort",
+    "symptoms": {
+      "extreme_clumsiness": true,
+      "dropping_things": true,
+      "waddling_gait": true,
+      "emotional_sensitivity": true,
+      "pelvic_pressure": true,
+      "nesting_beginning": true
+    },
+    "suggested_action": "Center of gravity so shifted that balance is genuinely difficult. Relaxin makes grip strength unpredictable. Waddling gait from pelvic loosening is necessary adaptation. Emotions raw from discomfort and approaching life change. Clear all walkways, install grab bars, accompany on stairs. Pick up dropped items without being asked. Never laugh at waddle - it's painful necessity. Provide emotional reassurance constantly. Support nesting but enforce rest. Understand vulnerability is physical and emotional."
+  },
+  {
+    "id": 31,
+    "week": "31",
+    "summary": "Significant discomfort as baby takes up most available space",
+    "symptoms": {
+      "intense_discomfort": true,
+      "organ_compression": true,
+      "frequent_braxton_hicks": true,
+      "nesting_urges": "strong",
+      "appetite_decreased": true,
+      "mood_swings": true
+    },
+    "suggested_action": "Baby now occupies most of abdominal cavity, compressing all organs. Stomach pushed up causing instant fullness. Lungs compressed limiting deep breaths. Strong nesting biological drive to prepare environment. Support small frequent meals - large ones impossible. Help channel nesting productively while preventing exhaustion. Time Braxton Hicks to learn patterns. Validate discomfort - she's not complaining, genuinely uncomfortable. Prepare freezer meals together. Organize baby items. Maximum patience required."
+  },
+  {
+    "id": 32,
+    "week": "32",
+    "summary": "Rapid expansion may bring stretch marks and body image concerns",
+    "symptoms": {
+      "stretch_marks": "likely",
+      "body_image_issues": true,
+      "breast_leaking": "possible",
+      "severe_heartburn": true,
+      "baby_movements_visible": true,
+      "exhaustion": true
+    },
+    "suggested_action": "Skin stretching rapidly may cause new stretch marks despite prevention efforts. Body dramatically changed from pre-pregnancy. Colostrum may leak sporadically. Baby movements visible from outside - alien-like but normal. Reassure about body changes - growing human is incredible achievement. Stretch marks fade to silver eventually. Provide breast pads discretely. Marvel at visible movements together. Combat heartburn with medication if needed. Express physical attraction verbally - specific compliments help."
+  },
+  {
+    "id": 33,
+    "week": "33",
+    "summary": "Colostrum production, extreme emotional sensitivity",
+    "symptoms": {
+      "colostrum_leaking": true,
+      "extreme_emotions": true,
+      "anxiety_about_birth": true,
+      "poor_sleep": true,
+      "braxton_hicks_frequent": true,
+      "preparation_urgency": true
+    },
+    "suggested_action": "Breasts preparing for feeding with antibody-rich colostrum. Hormones plus exhaustion plus anxiety create emotional perfect storm. Birth approaching creates specific fears. Sleep nearly impossible from size and discomfort. Understand emotional intensity is hormonal not chosen. Address specific birth fears with information. Practice relaxation techniques together. Finalize all preparations. Tour birthing facility. Pack hospital bags. Provide constant emotional support without trying to 'fix' feelings. Your stability helps her cope."
+  },
+  {
+    "id": 34,
+    "week": "34",
+    "summary": "Pelvic pressure intense as baby settles lower",
+    "symptoms": {
+      "extreme_pelvic_pressure": true,
+      "feeling_full_constantly": true,
+      "waddling_pronounced": true,
+      "sleep_impossible": true,
+      "anxiety_high": true,
+      "physical_misery": true
+    },
+    "suggested_action": "Baby dropping into pelvis preparation for birth. Pressure on cervix, bladder, rectum intense. Walking difficult and painful. Sleep deprivation affecting function. Physical misery genuine and constant. Provide physical support for all movement. Create multiple rest stations throughout home. Handle all physical tasks. Validate that this is genuinely difficult - she's not exaggerating. Practice infant care together. Address fears specifically. Count down days together. Remind her body knows what to do."
+  },
+  {
+    "id": 35,
+    "week": "35",
+    "summary": "Nesting urgency fights with exhaustion",
+    "symptoms": {
+      "nesting_overwhelming": true,
+      "exhaustion_extreme": true,
+      "anxiety_about_readiness": true,
+      "braxton_hicks_confusing": true,
+      "fluid_leaking_concerns": true,
+      "done_with_pregnancy": true
+    },
+    "suggested_action": "Biological drive to prepare environment intensifies despite exhaustion. Every Braxton Hicks questioned as real labor. Discharge increases causing leak concerns. Mentally done but baby not ready. Balance nesting support with rest enforcement. She'll exhaust herself if allowed. Learn to check fluid leaks - continuous clear/odorless needs evaluation. Validate feeling 'done' while encouraging patience. Complete essential tasks only. Practice timing contractions. Review when to go to hospital. Maximum support mode activated."
+  },
+  {
+    "id": 36,
+    "week": "36",
+    "summary": "Lightening may occur improving breathing but increasing pressure",
+    "symptoms": {
+      "lightening_possible": true,
+      "breathing_easier": "if_dropped",
+      "pelvic_pressure_extreme": true,
+      "cervical_changes": true,
+      "false_labor": "possible",
+      "preparation_complete": true
+    },
+    "suggested_action": "Baby dropping (lightening) trades breathing room for pelvic pressure. Cervix beginning effacement and dilation. False labor contractions confusing and frustrating. Final preparations urgent. Celebrate breathing improvement if occurs. Support waddle walking - pressure is intense. Stay calm during false alarms. Review true vs false labor signs repeatedly. Keep hospital bag in car. Ensure all contact numbers current. Practice routes to hospital. Emotional support crucial as reality hits."
+  },
+  {
+    "id": 37,
+    "week": "37",
+    "summary": "Full term! Ready any moment, every twinge analyzed",
+    "symptoms": {
+      "full_term_relief": true,
+      "constant_vigilance": true,
+      "every_symptom_questioned": true,
+      "cervical_changes": true,
+      "exhaustion": true,
+      "impatience": true
+    },
+    "suggested_action": "Major milestone - baby can safely arrive anytime. Cervix progressively changing. Every sensation might be labor starting. Exhausted but too anxious to rest. Impatient for pregnancy to end. Stay within 30 minutes of hospital. Keep phones charged always. Don't travel far. Validate impatience while encouraging patience. Practice relaxation techniques. Time any regular contractions. Trust her instincts about changes. Remind her baby comes when ready. You're both ready."
+  },
+  {
+    "id": 38,
+    "week": "38",
+    "summary": "False labor common and frustrating, maximum discomfort",
+    "symptoms": {
+      "false_labor_episodes": true,
+      "extreme_discomfort": true,
+      "emotional_rollercoaster": true,
+      "everyone_asking": true,
+      "cervical_progress": "variable",
+      "desperation": true
+    },
+    "suggested_action": "False labor can be regular, painful, then stop - incredibly frustrating. Physical misery at maximum. Emotions swinging wildly. Everyone constantly asking 'any news?' causing pressure. Handle all communication with others. Shield from repeated questions. Provide distractions during waiting. Maximum comfort measures. Validate frustration with false labor. Don't suggest natural induction unless asked. Maintain calm presence despite own anxiety. She needs your stability."
+  },
+  {
+    "id": 39,
+    "week": "39",
+    "summary": "Due date approaching creates pressure and anxiety",
+    "symptoms": {
+      "due_date_pressure": true,
+      "physical_misery": true,
+      "constant_contractions": true,
+      "exhaustion_complete": true,
+      "emotional_intensity": true,
+      "readiness": true
+    },
+    "suggested_action": "Full term optimal timing but every day feels eternal. Contractions constant but not progressing. Cannot get comfortable in any position. Sleep deprivation complete. Emotions intense and variable. Field all inquiries - protect from pressure. 'No news yet' on repeat. Maximum support for any position. Express confidence in her body's timing. Practice breathing together. Review hospital preferences. Pack snacks for yourself. Your calmness helps her confidence. Any moment now."
+  },
+  {
+    "id": 40,
+    "week": "40",
+    "summary": "Due date arrival brings complex emotions if baby hasn't come",
+    "symptoms": {
+      "due_date_anxiety": true,
+      "overdue_feelings": true,
+      "induction_discussions": true,
+      "maximum_discomfort": true,
+      "impatience_extreme": true,
+      "worry_increasing": true
+    },
+    "suggested_action": "Only 5% deliver on due date but date has psychological weight. Feeling 'overdue' despite normal variation. Induction discussions adding pressure. Body at absolute limit. Everyone waiting increases stress. Remind constantly that variation is normal - not failure. Support whatever decision about waiting vs induction. Shield completely from others' impatience. Express pride in her strength. Prepare for labor any moment. Trust medical guidance. Your baby knows when ready. The wait is almost over. You're ready to meet your baby."
+  }
+]

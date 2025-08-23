@@ -1,0 +1,7 @@
+{
+  "name": "ReadyDaddy Pregnancy Tracker",
+  "description": "A comprehensive pregnancy tracking application designed specifically for first-time fathers to support them throughout their partner's pregnancy journey. It provides week-by-week information, practical tools, and gamified experiences.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
