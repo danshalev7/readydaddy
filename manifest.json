@@ -1,0 +1,24 @@
+{
+  "short_name": "ReadyDaddy",
+  "name": "ReadyDaddy Pregnancy Tracker",
+  "description": "A pregnancy tracker for first-time fathers. Get week-by-week info, practical tools, and support for your partner's pregnancy journey.",
+  "icons": [
+    {
+      "src": "/icons/icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#F9FAFB",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#3B82F6"
+}

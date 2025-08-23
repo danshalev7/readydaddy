@@ -40,8 +40,7 @@ const MilestoneTimeline: React.FC<MilestoneTimelineProps> = ({ milestones, celeb
                                 <h4 className="font-bold text-gray-900 dark:text-gray-100">{milestone.name}</h4>
                                 <p className="text-sm text-gray-600 dark:text-gray-300">{milestone.description}</p>
                                 {memory && (
-                                    <div className="mt-3 p-3 bg-gray-50 dark:bg-gray-700/50 rounded-lg flex items-start space-x-3">
-                                        {memory.photo && <img src={memory.photo} alt={`Memory of ${milestone.name}`} className="w-16 h-16 rounded-md object-cover flex-shrink-0" />}
+                                    <div className="mt-3 p-3 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
                                         <div className="text-sm">
                                             <p className="font-semibold text-gray-800 dark:text-gray-200">Your Memory:</p>
                                             <p className="italic text-gray-600 dark:text-gray-300">"{memory.note}"</p>

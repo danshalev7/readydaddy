@@ -52,7 +52,6 @@ export interface Milestone {
 
 export interface MilestoneMemory {
   milestoneId: string;
-  photo?: string; // base64 encoded image
   note: string;
   date: string;
 }
