@@ -3,11 +3,23 @@ import type { WeekData, UserProfile, Milestone } from '../types';
 
 const API_KEY = process.env.API_KEY;
 
-if (!API_KEY) {
-  console.error("API_KEY environment variable not set.");
+let ai: GoogleGenAI | null = null;
+
+// More robust check for the API key to handle empty strings or strings with only whitespace,
+// which can occur in some deployment environments like Vercel if the variable is present but empty.
+if (API_KEY && API_KEY.trim() !== '') {
+  try {
+    ai = new GoogleGenAI({ apiKey: API_KEY });
+  } catch (error) {
+    console.error("Error initializing GoogleGenAI. This might be due to an invalid API key format.", error);
+    ai = null;
+  }
+} else {
+  // Use console.warn as this is a configuration issue, not a runtime error.
+  console.warn("API_KEY environment variable not set or is empty. Gemini API features will be disabled. Please set the API_KEY in your Vercel deployment settings.");
 }
 
-const ai = new GoogleGenAI({ apiKey: API_KEY! });
+const MISSING_API_KEY_ERROR = "The application is not configured correctly. Gemini API features are disabled.";
 
 const weekDataSchema = {
     type: Type.OBJECT,
@@ -83,6 +95,21 @@ const weekDataSchema = {
 };
 
 export const getWeekData = async (week: number, profile: UserProfile): Promise<WeekData> => {
+    if (!ai) {
+        return {
+            week,
+            trimester: Math.ceil(week / 13),
+            babySize: { inches: 0, grams: 0, comparisonObject: '...' },
+            fetalSystems: [],
+            didYouKnowFact: '',
+            maternalChanges: [],
+            medicalGuidance: [],
+            warningSigns: [],
+            paternalGuidance: { paternalChanges: '', bondingOpportunity: '', actionableTasks: [] },
+            error: MISSING_API_KEY_ERROR
+        };
+    }
+
     const cacheKey = `week_${week}_data_v2`;
     const cachedData = localStorage.getItem(cacheKey);
     if (cachedData) {
@@ -161,6 +188,12 @@ const milestoneSchema = {
 };
 
 export const getPregnancyMilestones = async (profile: UserProfile): Promise<Milestone[]> => {
+    if (!ai) {
+        console.warn(MISSING_API_KEY_ERROR);
+        // To prevent crashing the app, return an empty array. The UI will handle this gracefully.
+        return [];
+    }
+
     const cacheKey = `pregnancy_milestones_v2`; // Bumped version for new schema
     const cachedData = localStorage.getItem(cacheKey);
     if (cachedData) {
@@ -196,11 +229,15 @@ Structure the output as a single JSON object adhering to the provided schema. In
 
     } catch (error) {
         console.error(`Error fetching pregnancy milestones:`, error);
-        throw new Error(`Failed to get pregnancy milestones.`);
+        return [];
     }
 };
 
 export const getFinalCountdownTip = async (day: number, profile: UserProfile): Promise<{ tip: string }> => {
+    if (!ai) {
+        return { tip: "Daily tip is unavailable because the app is not configured correctly." };
+    }
+
     const today = new Date().toISOString().split('T')[0];
     const cacheKey = `final_tip_${day}_${today}`;
     const cachedData = localStorage.getItem(cacheKey);

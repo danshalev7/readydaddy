@@ -35,67 +35,53 @@
         darkMode: 'class',
         theme: {
           extend: {
+            colors: {
+              'primary-blue': '#3B82F6',
+              'info-blue': '#3B82F6',
+              'alert-red': '#EF4444',
+              'mint-green': '#34D399',
+              'soft-purple': '#A78BFA',
+              'warm-coral': '#FB7185',
+              'warning-amber': '#F59E0B',
+              'energy-orange': '#FB923C',
+              'trust-teal': '#2DD4BF',
+              'comfort-yellow': '#FCD34D',
+              'success-green': '#10B981',
+              'pure-white': '#FFFFFF',
+              'mint-wash': '#F0FDF4',
+              'baby-blue': '#F0F9FF',
+              'soft-pink': '#FFF1F2',
+            },
             fontFamily: {
               sans: ['Inter', 'system-ui', 'sans-serif'],
               handwritten: ['Caveat', 'cursive'],
-              mono: ['Fira Code', 'monospace'],
-            },
-            colors: {
-              // Primary
-              'primary-blue': '#3B82F6',
-              'warm-coral': '#FB7185',
-              'soft-purple': '#A78BFA',
-              'mint-green': '#34D399',
-              // Emotional
-              'comfort-yellow': '#FCD34D',
-              'calm-lavender': '#C7D2FE',
-              'energy-orange': '#FB923C',
-              'trust-teal': '#2DD4BF',
-              // Semantic
-              'success-green': '#10B981',
-              'warning-amber': '#F59E0B',
-              'alert-red': '#EF4444',
-              'info-blue': '#3B82F6',
-              // Neutral
-              'gray-900': '#111827',
-              'gray-700': '#374151',
-              'gray-500': '#6B7280',
-              'gray-300': '#D1D5DB',
-              'gray-100': '#F3F4F6',
-              'gray-50': '#F9FAFB',
-              // Background
-              'pure-white': '#FFFFFF',
-              'baby-blue': '#F0F9FF',
-              'soft-pink': '#FFF1F2',
-              'mint-wash': '#F0FDF4',
+              mono: ["'Fira Code'", 'monospace'],
             },
             borderRadius: {
-              'sm': '8px',
               'md': '12px',
               'lg': '16px',
               'xl': '20px',
             },
             boxShadow: {
-              'sm': '0 2px 4px rgba(0,0,0,0.05)',
               'md': '0 4px 20px rgba(0,0,0,0.08)',
               'lg': '0 10px 40px rgba(0,0,0,0.12)',
             },
             keyframes: {
               fadeIn: {
-                '0%': { opacity: '0' },
-                '100%': { opacity: '1' },
+                'from': { opacity: 0 },
+                'to': { opacity: 1 },
               },
               slideInUp: {
-                '0%': { transform: 'translateY(20px)', opacity: '0' },
-                '100%': { transform: 'translateY(0)', opacity: '1' },
-              }
+                'from': { transform: 'translateY(20px)', opacity: 0 },
+                'to': { transform: 'translateY(0)', opacity: 1 },
+              },
             },
             animation: {
               fadeIn: 'fadeIn 0.5s ease-in-out',
               slideInUp: 'slideInUp 0.5s ease-in-out',
-            }
-          }
-        }
+            },
+          },
+        },
       }
     </script>
   <script type="importmap">
