@@ -28,7 +28,7 @@ const MilestoneTimeline: React.FC<MilestoneTimelineProps> = ({ milestones, celeb
                 {sortedMilestones.map(milestone => {
                     const isCelebrated = celebratedMilestoneIds.includes(milestone.id);
                     const memory = memories.find(m => m.milestoneId === milestone.id);
-                    const style = categoryStyles[milestone.category];
+                    const style = categoryStyles[milestone.category] || categoryStyles.Preparation;
 
                     return (
                         <div key={milestone.id} className="relative">

@@ -332,7 +332,7 @@ const App: React.FC = () => {
             style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
             {VIEW_ORDER.map(view => (
-                <div key={view} className="w-full flex-shrink-0 pb-20">
+                <div key={view} className="w-full flex-shrink-0 min-h-screen box-border pb-24">
                     {renderSpecificView(view)}
                 </div>
             ))}
