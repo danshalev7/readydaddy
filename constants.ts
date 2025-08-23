@@ -90,6 +90,24 @@ export const HOSPITAL_BAG_CHECKLIST: HospitalBagItem[] = [
     { id: 'baby3', name: 'Baby Blanket', category: 'For Baby' },
 ];
 
+export const FINAL_COUNTDOWN_TIPS: string[] = [
+  "Double-check the hospital bag. Got snacks and a long phone charger?",
+  "Practice the route to the hospital. Know where to park.",
+  "Your partner's job is labor. Your job is support. Be her advocate.",
+  "Review your birth plan, but be ready for it to change. Flexibility is key.",
+  "Take a moment to connect with your partner. A calm team is a strong team.",
+  "Install the car seat. Get it checked by a professional if you can.",
+  "Sleep whenever you can. You're about to enter a 24/7 job.",
+  "Make a playlist of calming music for the hospital room.",
+  "Charge all your devices: phones, cameras, headphones.",
+  "Talk about your fears and excitement together. You're in this as a team.",
+  "Line up support for after the birth (family, friends, food delivery).",
+  "Eat a good meal. You'll need the energy.",
+  "Pack your own go-bag with a change of clothes and toiletries.",
+  "Remind your partner how amazing she is. She needs to hear it.",
+  "Review the signs of labor one more time. When in doubt, call the provider.",
+];
+
 export const DAILY_MESSAGES: DailyMessageWeek[] = [
   {
     "week": 3,

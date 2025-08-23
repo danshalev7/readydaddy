@@ -2,11 +2,17 @@ const CACHE_NAME = 'readydaddy-v1';
 const urlsToCache = [
   '/',
   '/index.html',
-  '/index.tsx',
+  '/manifest.json',
+  '/icons/icon-192x192.png',
+  '/icons/icon-512x512.png',
+  // Data files for offline access
+  '/data/fetal_system_development.json',
+  '/data/maternal_changes_timeline.json',
+  '/data/medical_explanations_reference.json',
+  '/data/weekly_pregnancy_cards_content.json',
   // Key dependencies from esm.sh
   'https://esm.sh/react@^19.1.1',
   'https://esm.sh/react-dom@^19.1.1/client',
-  'https://esm.sh/@google/genai@^1.15.0',
   // Fonts
   'https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Fira+Code:wght@400;700&family=Inter:wght@400;500;600;700&display=swap',
   'https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2'

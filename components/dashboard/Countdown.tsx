@@ -1,5 +1,5 @@
 import React, { useMemo, useState, useEffect } from 'react';
-import { getFinalCountdownTip } from '../../services/geminiService';
+import { FINAL_COUNTDOWN_TIPS } from '../../constants';
 import { UserProfile, View } from '../../types';
 
 interface CountdownProps {
@@ -9,8 +9,7 @@ interface CountdownProps {
 
 const Countdown: React.FC<CountdownProps> = ({ userProfile, setActiveView }) => {
   const [dailyTip, setDailyTip] = useState<string | null>(null);
-  const [tipLoading, setTipLoading] = useState(false);
-
+  
   const { daysRemaining, trimester, trimesterProgress, isFinalCountdown } = useMemo(() => {
     const today = new Date();
     today.setHours(0, 0, 0, 0);
@@ -40,20 +39,10 @@ const Countdown: React.FC<CountdownProps> = ({ userProfile, setActiveView }) => 
 
   useEffect(() => {
     if (isFinalCountdown) {
-      const fetchTip = async () => {
-        setTipLoading(true);
-        try {
-          const tipData = await getFinalCountdownTip(daysRemaining, userProfile);
-          setDailyTip(tipData.tip);
-        } catch (e) {
-          setDailyTip("Remember to take deep breaths and stay calm. You've got this!");
-        } finally {
-          setTipLoading(false);
-        }
-      };
-      fetchTip();
+      // Select a tip from the static list based on the day
+      setDailyTip(FINAL_COUNTDOWN_TIPS[daysRemaining % FINAL_COUNTDOWN_TIPS.length]);
     }
-  }, [isFinalCountdown, daysRemaining, userProfile]);
+  }, [isFinalCountdown, daysRemaining]);
 
   const countdownStyle = isFinalCountdown 
     ? "bg-gradient-to-r from-alert-red to-energy-orange text-white" 
@@ -93,14 +82,10 @@ const Countdown: React.FC<CountdownProps> = ({ userProfile, setActiveView }) => 
             <div className="bg-white h-2.5 rounded-full" style={{width: `${trimesterProgress}%`}}></div>
         </div>
       </div>
-      {isFinalCountdown && (
+      {isFinalCountdown && dailyTip && (
         <div className="mt-4 pt-4 border-t border-white/30">
           <h3 className="font-bold text-md">💡 Daily Dad Tip:</h3>
-          {tipLoading ? (
-             <div className="h-4 bg-white/30 rounded w-3/4 animate-pulse mt-1"></div>
-          ) : (
-            <p className="text-sm mt-1">{dailyTip}</p>
-          )}
+          <p className="text-sm mt-1">{dailyTip}</p>
         </div>
       )}
     </div>

@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { getWeekData, refreshWeekData } from '../../services/geminiService';
-import type { WeekData, UserProfile } from '../../types';
+import { PregnancyDataService } from '../../services/pregnancyDataService';
+import type { AggregatedWeekData, UserProfile, FetalDevelopment, MedicalExplanation } from '../../types';
 import LoadingSpinner from '../common/LoadingSpinner';
-import { ChevronLeftIcon, ChevronRightIcon, BabyIcon, HeartIcon, UserIcon, MedicalIcon, RefreshCwIcon } from '../layout/Icons';
+import { ChevronLeftIcon, ChevronRightIcon, BabyIcon, HeartIcon, UserIcon, MedicalIcon, AlertTriangleIcon } from '../layout/Icons';
 
 interface WeekViewProps {
   userProfile: UserProfile;
@@ -36,116 +36,126 @@ const StatusBadge: React.FC<{ status: Status }> = ({ status }) => {
     return <span className={`px-2 py-1 text-xs font-medium rounded-full ${statusStyles[status]}`}>{status}</span>;
 };
 
-const BabyContent: React.FC<{ data: WeekData }> = ({ data }) => (
+const BabyContent: React.FC<{ data: AggregatedWeekData }> = ({ data }) => (
     <div className="space-y-4 animate-slideInUp">
         <div className="bg-pure-white dark:bg-gray-800 p-6 rounded-xl shadow-md text-center">
             <p className="text-lg font-semibold text-soft-purple">Baby is the size of a</p>
-            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 capitalize my-2">{data.babySize.comparisonObject}</h3>
-            <p className="text-gray-500 dark:text-gray-400">{data.babySize.inches.toFixed(2)}" / {data.babySize.grams.toFixed(1)}g</p>
+            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 capitalize my-2">{data.weeklyCard?.baby_size_comparison || '...'}</h3>
+            <p className="text-gray-500 dark:text-gray-400">{data.weeklyCard?.baby_size_inches.toFixed(2)}" / {data.weeklyCard?.baby_weight_grams.toFixed(1)}g</p>
         </div>
         
         <div className="bg-pure-white dark:bg-gray-800 p-4 rounded-xl shadow-md">
             <h4 className="text-lg font-bold mb-3 px-2">Key Systems Development</h4>
             <div className="space-y-2">
-                {data.fetalSystems.map(system => (
-                    <CollapsibleSection key={system.name} title={system.name}>
+                {data.fetalDevelopment.map((system: FetalDevelopment) => (
+                    <CollapsibleSection key={system.id} title={system.system_name}>
                         <div className="space-y-3 text-sm">
                             <p><StatusBadge status={system.status} /></p>
-                            <p><strong className="font-semibold">What's Happening:</strong> {system.fatherFriendlyExplanation}</p>
-                            <p><strong className="font-semibold">Clinical Significance:</strong> {system.clinicalSignificance}</p>
-                            <p><strong className="font-semibold">Why This Matters For Dad:</strong> {system.whyThisMatters}</p>
+                            <p><strong className="font-semibold">What's Happening:</strong> {system.this_week_summary}</p>
+                            <p><strong className="font-semibold">Why This Matters For Dad:</strong> {system.father_understanding_note}</p>
                         </div>
                     </CollapsibleSection>
                 ))}
             </div>
         </div>
         
-        <div className="bg-baby-blue dark:bg-info-blue/10 p-4 rounded-xl border-l-4 border-info-blue">
-            <h4 className="font-bold text-blue-800 dark:text-blue-200">Did You Know?</h4>
-            <p className="text-sm text-blue-700 dark:text-blue-300 mt-1">{data.didYouKnowFact}</p>
-        </div>
-    </div>
-);
-
-const PartnerContent: React.FC<{ data: WeekData, partnerName: string }> = ({ data, partnerName }) => (
-    <div className="space-y-4 animate-slideInUp">
-         <div className="bg-pure-white dark:bg-gray-800 p-4 rounded-xl shadow-md">
-            <h4 className="text-lg font-bold mb-3 px-2">What {partnerName} Might Be Experiencing</h4>
-            <div className="space-y-2">
-                {data.maternalChanges.map(change => (
-                    <CollapsibleSection key={change.symptom} title={change.symptom}>
-                        <div className="space-y-3 text-sm">
-                            <p><strong className="font-semibold">Timeline:</strong> {change.timeline}</p>
-                            <div className={`p-3 rounded-lg ${change.isWarningSign ? 'bg-red-50 dark:bg-alert-red/10 border-l-4 border-alert-red' : 'bg-soft-pink dark:bg-warm-coral/10'}`}>
-                                <h5 className="font-bold">How you can help:</h5>
-                                <p className="text-sm">{change.fatherActionItem}</p>
-                            </div>
-                        </div>
-                    </CollapsibleSection>
-                ))}
-            </div>
-        </div>
-    </div>
-);
-
-
-const FatherContent: React.FC<{ data: WeekData }> = ({ data }) => (
-     <div className="space-y-4 animate-slideInUp">
-        <div className="bg-pure-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
-            <h4 className="text-lg font-bold mb-2">Your Emotional Journey</h4>
-            <p className="text-sm text-gray-600 dark:text-gray-300">{data.paternalGuidance.paternalChanges}</p>
-        </div>
-         <div className="bg-pure-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
-            <h4 className="text-lg font-bold mb-2">Bonding Opportunity</h4>
-            <p className="text-sm text-gray-600 dark:text-gray-300">{data.paternalGuidance.bondingOpportunity}</p>
-        </div>
-         <div className="bg-pure-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
-            <h4 className="text-lg font-bold mb-2">Your Mission This Week</h4>
-             <ul className="list-disc list-inside space-y-1 text-sm text-gray-600 dark:text-gray-300">
-                {data.paternalGuidance.actionableTasks.map(task => <li key={task}>{task}</li>)}
-            </ul>
-        </div>
-    </div>
-);
-
-const MedicalContent: React.FC<{ data: WeekData }> = ({ data }) => (
-    <div className="space-y-4 animate-slideInUp">
-        {data.warningSigns.length > 0 && (
-            <div className="bg-red-50 dark:bg-alert-red/10 p-4 rounded-xl border-l-4 border-alert-red">
-                <h4 className="font-bold text-red-800 dark:text-red-200">Warning Signs: Call a Doctor If...</h4>
-                <ul className="list-disc list-inside space-y-1 text-sm text-red-700 dark:text-red-300 mt-2">
-                    {data.warningSigns.map((sign, i) => <li key={i}>{sign}</li>)}
-                </ul>
+        {data.weeklyCard?.did_you_know && (
+            <div className="bg-baby-blue dark:bg-info-blue/10 p-4 rounded-xl border-l-4 border-info-blue">
+                <h4 className="font-bold text-blue-800 dark:text-blue-200">Did You Know?</h4>
+                <p className="text-sm text-blue-700 dark:text-blue-300 mt-1">{data.weeklyCard.did_you_know}</p>
             </div>
         )}
-        <div className="bg-pure-white dark:bg-gray-800 p-4 rounded-xl shadow-md">
-            <h4 className="text-lg font-bold mb-3 px-2">Medical Topics & Appointments</h4>
-            <div className="space-y-2">
-                {data.medicalGuidance.map(item => (
-                    <CollapsibleSection key={item.topic} title={item.topic}>
-                         <div className="space-y-3 text-sm">
-                            <p>{item.simplifiedExplanation}</p>
-                             <CollapsibleSection title="Detailed Explanation">
-                                <p className="text-xs whitespace-pre-wrap">{item.detailedExplanation}</p>
-                            </CollapsibleSection>
-                            {item.fatherAdvocacyScript && item.fatherAdvocacyScript.length > 0 && (
-                                <CollapsibleSection title="Advocacy Script for Dad">
-                                    <ul className="list-disc list-inside space-y-1 text-xs font-semibold italic">
-                                        {item.fatherAdvocacyScript.map(script => <li key={script}>"{script}"</li>)}
-                                    </ul>
-                                </CollapsibleSection>
-                            )}
-                        </div>
-                    </CollapsibleSection>
-                ))}
-            </div>
-        </div>
     </div>
 );
+
+const PartnerContent: React.FC<{ data: AggregatedWeekData, partnerName: string }> = ({ data, partnerName }) => {
+    if (!data.maternalChanges) return null;
+    return (
+        <div className="space-y-4 animate-slideInUp">
+             <div className="bg-pure-white dark:bg-gray-800 p-4 rounded-xl shadow-md">
+                <h4 className="text-lg font-bold mb-3 px-2">What {partnerName} Might Be Experiencing</h4>
+                <div className="bg-gray-50 dark:bg-gray-700/50 rounded-lg p-4 space-y-3">
+                    <p className="text-sm">{data.maternalChanges.summary}</p>
+                     <div className='bg-soft-pink dark:bg-warm-coral/10 p-3 rounded-lg'>
+                        <h5 className="font-bold">How you can help:</h5>
+                        <p className="text-sm">{data.maternalChanges.suggested_action}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+const FatherContent: React.FC<{ data: AggregatedWeekData }> = ({ data }) => {
+    if (!data.weeklyCard) return null;
+    return (
+        <div className="space-y-4 animate-slideInUp">
+            <div className="bg-pure-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
+                <h4 className="text-lg font-bold mb-2">Your Emotional Journey</h4>
+                <p className="text-sm text-gray-600 dark:text-gray-300">{data.weeklyCard.paternal_changes}</p>
+            </div>
+             <div className="bg-pure-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
+                <h4 className="text-lg font-bold mb-2">Bonding Opportunity</h4>
+                <p className="text-sm text-gray-600 dark:text-gray-300">{data.weeklyCard.bonding_opportunities}</p>
+            </div>
+             <div className="bg-pure-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
+                <h4 className="text-lg font-bold mb-2">Your Mission This Week</h4>
+                 <ul className="list-disc list-inside space-y-1 text-sm text-gray-600 dark:text-gray-300">
+                    {data.weeklyCard.actionable_tasks.split(', ').map(task => <li key={task}>{task}</li>)}
+                </ul>
+            </div>
+        </div>
+    );
+};
+
+const MedicalContent: React.FC<{ data: AggregatedWeekData }> = ({ data }) => {
+    const warningSigns: string[] = data.medicalInfo.reduce((acc: string[], item: MedicalExplanation) => {
+        const signs = (item.related_warning_signs as any)?.warning_signs;
+        if (Array.isArray(signs)) {
+            return [...acc, ...signs];
+        }
+        return acc;
+    }, []);
+
+    return (
+        <div className="space-y-4 animate-slideInUp">
+            {warningSigns.length > 0 && (
+                <div className="bg-red-50 dark:bg-alert-red/10 p-4 rounded-xl border-l-4 border-alert-red">
+                    <div className="flex items-start">
+                        <AlertTriangleIcon className="w-6 h-6 text-alert-red mr-3 flex-shrink-0" />
+                        <div>
+                            <h4 className="font-bold text-red-800 dark:text-red-200">Potential Warning Signs This Trimester</h4>
+                            <ul className="list-disc list-inside space-y-1 text-sm text-red-700 dark:text-red-300 mt-2">
+                                {[...new Set(warningSigns)].map((sign, i) => <li key={i}>{sign}</li>)}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            )}
+            <div className="bg-pure-white dark:bg-gray-800 p-4 rounded-xl shadow-md">
+                <h4 className="text-lg font-bold mb-3 px-2">Medical Topics & Appointments</h4>
+                <div className="space-y-2">
+                    {data.medicalInfo.map(item => (
+                        <CollapsibleSection key={item.topic} title={item.topic.replace(/_/g, ' ')}>
+                             <div className="space-y-3 text-sm">
+                                <p>{item.simplified_explanation}</p>
+                                {item.advocacy_script && (
+                                    <CollapsibleSection title="Advocacy Script for Dad">
+                                        <p className="text-xs font-semibold italic">"{item.advocacy_script}"</p>
+                                    </CollapsibleSection>
+                                )}
+                            </div>
+                        </CollapsibleSection>
+                    ))}
+                </div>
+            </div>
+        </div>
+    );
+};
 
 
 const WeekView: React.FC<WeekViewProps> = ({ userProfile, currentWeek, onWeekChange, maxPregnancyWeek, onWeekRead }) => {
-  const [weekData, setWeekData] = useState<WeekData | null>(null);
+  const [weekData, setWeekData] = useState<AggregatedWeekData | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<Tab>('partner');
@@ -155,38 +165,21 @@ const WeekView: React.FC<WeekViewProps> = ({ userProfile, currentWeek, onWeekCha
     setError(null);
     setWeekData(null);
     
-    const data = await getWeekData(week, userProfile);
-
-    if (data.error) {
-        setError(data.error);
-        setWeekData(null);
-    } else {
-        setWeekData(data);
-        onWeekRead(week);
+    try {
+        const data = await PregnancyDataService.getWeeklyContent(week);
+        if (data.error) {
+            setError(data.error);
+            setWeekData(null);
+        } else {
+            setWeekData(data);
+            onWeekRead(week);
+        }
+    } catch(err) {
+        setError(`We couldn't load the guide for week ${week}. Please check your connection and try again.`);
     }
     
     setLoading(false);
-  }, [userProfile, onWeekRead]);
-  
-  const handleRefresh = useCallback(() => {
-      if(weekData) {
-          setLoading(true);
-          setError(null);
-          refreshWeekData(weekData.week, userProfile).then(data => {
-              if (data.error) {
-                  setError(data.error);
-                  setWeekData(null);
-              } else {
-                  setWeekData(data);
-              }
-          }).catch(err => {
-              setError('Failed to refresh week data.');
-              console.error(err);
-          }).finally(() => {
-              setLoading(false);
-          });
-      }
-  }, [weekData, userProfile]);
+  }, [onWeekRead]);
 
   useEffect(() => {
     fetchWeek(currentWeek);
@@ -226,16 +219,8 @@ const WeekView: React.FC<WeekViewProps> = ({ userProfile, currentWeek, onWeekCha
         <button onClick={() => navigateWeek('prev')} disabled={currentWeek === 1} className="p-2 rounded-full bg-pure-white dark:bg-gray-700 shadow-md disabled:opacity-50 disabled:cursor-not-allowed transition-colors active:bg-gray-200 dark:active:bg-gray-600">
           <ChevronLeftIcon />
         </button>
-        <div className="text-center flex items-center gap-4">
+        <div className="text-center">
             <h2 className="text-2xl font-bold">Week {currentWeek}</h2>
-            <button 
-                onClick={handleRefresh} 
-                disabled={loading || !weekData} 
-                className="p-2 rounded-full bg-pure-white dark:bg-gray-700 shadow-md disabled:opacity-50 disabled:cursor-not-allowed transition-colors active:bg-gray-200 dark:active:bg-gray-600"
-                aria-label="Refresh week data"
-            >
-                <RefreshCwIcon className={loading ? 'animate-spin' : ''} />
-            </button>
         </div>
         <button onClick={() => navigateWeek('next')} disabled={currentWeek === 40} className="p-2 rounded-full bg-pure-white dark:bg-gray-700 shadow-md disabled:opacity-50 disabled:cursor-not-allowed transition-colors active:bg-gray-200 dark:active:bg-gray-600">
           <ChevronRightIcon />
@@ -259,7 +244,8 @@ const WeekView: React.FC<WeekViewProps> = ({ userProfile, currentWeek, onWeekCha
       <div className="relative min-h-[300px]">
         {loading && <div className="absolute inset-0 flex items-center justify-center"><LoadingSpinner /></div>}
         {error && <p className="text-center text-alert-red pt-10">{error}</p>}
-        {weekData && !loading && !error && renderContent()}
+        {weekData && !loading && !error && weekData.hasData && renderContent()}
+        {weekData && !weekData.hasData && !loading && <p className="text-center text-gray-500 pt-10">No specific information available for this week.</p>}
         {isFutureWeek && (
             <div className="absolute inset-0 bg-gray-900/60 backdrop-blur-sm flex flex-col items-center justify-center text-pure-white rounded-xl text-center p-4 z-20">
                 <h3 className="text-3xl font-bold">Coming Soon!</h3>

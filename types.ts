@@ -117,15 +117,20 @@ export interface WeekData {
 
 // Types for services/pregnancyDataService.ts (likely legacy)
 export interface FetalDevelopment {
+  id: string;
   week: string;
   system_name: string;
   status: 'Forming' | 'Developing' | 'Functional';
   is_critical_window: boolean;
+  this_week_summary: string;
+  father_understanding_note: string;
 }
 
 export interface MaternalChanges {
   week: string;
   symptoms: string[];
+  summary: string;
+  suggested_action: string;
 }
 
 export interface MedicalExplanation {
@@ -133,11 +138,21 @@ export interface MedicalExplanation {
   category: string;
   week_range: string;
   simplified_explanation: string;
+  related_warning_signs?: {
+    warning_signs: string[];
+  };
+  advocacy_script?: string;
 }
 
 export interface WeeklyCard {
   week: number;
   baby_size_comparison: string;
+  baby_size_inches: number;
+  baby_weight_grams: number;
+  did_you_know?: string;
+  paternal_changes: string;
+  bonding_opportunities: string;
+  actionable_tasks: string;
 }
 
 export interface AggregatedWeekData {

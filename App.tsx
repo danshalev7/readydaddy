@@ -7,7 +7,7 @@ import Profile from './components/profile/Profile';
 import BottomNav from './components/layout/BottomNav';
 import AchievementToast from './components/common/AchievementToast';
 import { View, UserProfile, UserProgress, Achievement, Milestone, MilestoneMemory } from './types';
-import { getPregnancyMilestones } from './services/geminiService';
+import { MILESTONES } from './data/milestones';
 import { ACHIEVEMENTS, LEVEL_THRESHOLDS } from './constants';
 
 const VIEW_ORDER = [View.Dashboard, View.Weekly, View.Labor, View.Profile];
@@ -105,7 +105,7 @@ const App: React.FC = () => {
 
   useEffect(() => {
     if (userProfile) {
-        getPregnancyMilestones(userProfile).then(setMilestones).catch(console.error);
+        setMilestones(MILESTONES);
     }
   }, [userProfile]);
 
