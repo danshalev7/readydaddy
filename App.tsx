@@ -314,7 +314,7 @@ const App: React.FC = () => {
   const currentIndex = VIEW_ORDER.indexOf(activeView);
 
   return (
-    <div className="min-h-screen font-sans text-gray-900 dark:text-gray-100 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <div className="min-h-[100svh] font-sans text-gray-900 dark:text-gray-100 transition-colors duration-300 overflow-x-hidden">
       {unlockedAchievementToast && (
         <AchievementToast 
           achievement={unlockedAchievementToast} 
@@ -332,7 +332,7 @@ const App: React.FC = () => {
             style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
             {VIEW_ORDER.map(view => (
-                <div key={view} className="w-full flex-shrink-0 min-h-screen box-border pb-24">
+                <div key={view} className="w-full flex-shrink-0 min-h-[100svh] box-border pb-24">
                     {renderSpecificView(view)}
                 </div>
             ))}

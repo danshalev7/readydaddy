@@ -17,11 +17,16 @@ interface DashboardProps {
 const Dashboard: React.FC<DashboardProps> = ({ userProfile, userProgress, currentWeek, setActiveView, milestones, onMilestoneCelebrated }) => {
   const [milestoneToCelebrate, setMilestoneToCelebrate] = useState<Milestone | null>(null);
 
+  const hasDismissedCelebration = (milestoneId: string) => {
+    return sessionStorage.getItem(`dismissed_${milestoneId}`) === 'true';
+  };
+
   useEffect(() => {
     if (milestones.length > 0 && userProgress) {
       const uncelebratedMilestone = milestones.find(m => 
         m.week === currentWeek && 
-        !userProgress.celebratedMilestones.includes(m.id)
+        !userProgress.celebratedMilestones.includes(m.id) &&
+        !hasDismissedCelebration(m.id)
       );
       if (uncelebratedMilestone) {
         // A short delay to allow the user to see the dashboard first
@@ -35,17 +40,25 @@ const Dashboard: React.FC<DashboardProps> = ({ userProfile, userProgress, curren
     setMilestoneToCelebrate(null);
   }
 
+  const handleCelebrationClose = () => {
+    if (milestoneToCelebrate) {
+      sessionStorage.setItem(`dismissed_${milestoneToCelebrate.id}`, 'true');
+    }
+    setMilestoneToCelebrate(null);
+  };
+
   return (
     <>
       {milestoneToCelebrate && (
         <MilestoneCelebration 
           milestone={milestoneToCelebrate}
           onComplete={handleCelebrationComplete}
+          onClose={handleCelebrationClose}
         />
       )}
-      <div className="p-4 space-y-6 animate-fadeIn">
+      <div className="p-4 space-y-4 md:space-y-6 animate-fadeIn">
         <header>
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100">Your Journey with {userProfile.partnerName}</h1>
+          <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-gray-100">Your Journey with {userProfile.partnerName}</h1>
           <p className="text-md text-gray-600 dark:text-gray-400">You're on week {currentWeek} of this amazing adventure.</p>
         </header>
         

@@ -52,7 +52,7 @@ const Countdown: React.FC<CountdownProps> = ({ userProfile, setActiveView }) => 
     return (
       <div className="p-6 rounded-xl shadow-lg animate-slideInUp bg-gradient-to-r from-mint-green to-trust-teal text-white text-center">
         <h2 className="text-2xl font-bold">Baby Watch!</h2>
-        <p className="text-4xl font-bold my-3">
+        <p className="text-2xl sm:text-3xl font-bold my-3">
           {daysRemaining === 0 ? "Due Today!" : `${Math.abs(daysRemaining)} days past due`}
         </p>
         <p className="mb-4">It could be any moment now. Stay ready and supportive!</p>
@@ -70,8 +70,8 @@ const Countdown: React.FC<CountdownProps> = ({ userProfile, setActiveView }) => 
     <div className={`p-6 rounded-xl shadow-lg animate-slideInUp ${countdownStyle}`}>
       <h2 className="text-xl font-bold">{isFinalCountdown ? "Final Countdown!" : "Baby ETA"}</h2>
       <div className="flex items-baseline justify-center gap-2 mt-2">
-        <span className="text-6xl font-bold">{daysRemaining}</span>
-        <span className="text-2xl font-semibold">days</span>
+        <span className="text-4xl sm:text-5xl font-bold">{daysRemaining}</span>
+        <span className="text-xl sm:text-2xl font-semibold">days</span>
       </div>
       <div className="mt-4">
         <div className="flex justify-between text-sm font-medium mb-1">

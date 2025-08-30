@@ -57,7 +57,8 @@ export class PregnancyDataService {
     try {
       const weekStr = week.toString();
       
-      const fetal = fetalDevelopment.filter(item => item.week === weekStr);
+      // FIX: Ensure week is compared as a string, as `item.week` can be a number or string.
+      const fetal = fetalDevelopment.filter(item => item.week.toString() === weekStr);
       const maternal = maternalChanges.find(item => item.week === weekStr) || null;
       const medical = medicalExplanations.filter(item => {
         if (!item.week_range) return false;
@@ -93,101 +94,5 @@ export class PregnancyDataService {
         error: (error as Error).message
       };
     }
-  }
-
-  static async getAllWeeks(): Promise<AggregatedWeekData[]> {
-    const weekPromises = Array.from({length: 40}, (_, i) => i + 1)
-      .map(week => this.getWeeklyContent(week));
-    const allData = await Promise.all(weekPromises);
-    return allData.filter(weekData => weekData.hasData);
-  }
-
-  static async getSystemDevelopment(systemName: string): Promise<FetalDevelopment[]> {
-    await initialize();
-    try {
-      return fetalDevelopment.filter(item => 
-        item.system_name && 
-        item.system_name.toLowerCase() === systemName.toLowerCase()
-      ).sort((a, b) => parseInt(a.week) - parseInt(b.week));
-    } catch (error) {
-      console.error(`Error filtering by system ${systemName}:`, error);
-      return [];
-    }
-  }
-
-  static async getDevelopmentByStatus(status: 'Forming' | 'Developing' | 'Functional'): Promise<FetalDevelopment[]> {
-    await initialize();
-    try {
-      return fetalDevelopment.filter(item =>
-        item.status && 
-        item.status.toLowerCase() === status.toLowerCase()
-      ).sort((a, b) => parseInt(a.week) - parseInt(b.week));
-    } catch (error) {
-      console.error(`Error filtering by status ${status}:`, error);
-      return [];
-    }
-  }
-
-  static async getCriticalWindows(): Promise<FetalDevelopment[]> {
-    await initialize();
-    try {
-      return fetalDevelopment.filter(item => 
-        item.is_critical_window === true
-      ).sort((a, b) => parseInt(a.week) - parseInt(b.week));
-    } catch (error) {
-      console.error('Error getting critical windows:', error);
-      return [];
-    }
-  }
-
-  static async searchMedicalTopics(query: string): Promise<MedicalExplanation[]> {
-    await initialize();
-    try {
-      const searchTerm = query.toLowerCase();
-      return medicalExplanations.filter(item =>
-        (item.topic && item.topic.toLowerCase().includes(searchTerm)) ||
-        (item.category && item.category.toLowerCase().includes(searchTerm)) ||
-        (item.simplified_explanation && item.simplified_explanation.toLowerCase().includes(searchTerm))
-      );
-    } catch (error) {
-      console.error(`Error searching medical topics for "${query}":`, error);
-      return [];
-    }
-  }
-
-  static async validateData() {
-    await initialize();
-    const validation = {
-      isValid: true,
-      errors: [] as string[],
-      summary: {
-        fetalDevelopment: fetalDevelopment.length,
-        maternalChanges: maternalChanges.length,
-        medicalExplanations: medicalExplanations.length,
-        weeklyCards: weeklyCards.length
-      }
-    };
-
-    try {
-      const essentialWeeks = [4, 8, 12, 20, 28, 37, 40];
-      
-      for (const week of essentialWeeks) {
-        const weekData = await this.getWeeklyContent(week);
-        if (!weekData.hasData) {
-          validation.isValid = false;
-          validation.errors.push(`Missing data for essential week ${week}`);
-        }
-      }
-
-    } catch (error) {
-      validation.isValid = false;
-      validation.errors.push(`Data validation error: ${(error as Error).message}`);
-    }
-
-    if(validation.errors.length > 0) {
-        console.warn("Data validation issues:", validation.errors);
-    }
-
-    return validation;
   }
 }

@@ -4,16 +4,18 @@ import type { Milestone, MilestoneMemory } from '../../types';
 interface MilestoneCelebrationProps {
   milestone: Milestone;
   onComplete: (milestoneId: string, memory?: MilestoneMemory) => void;
+  onClose: () => void;
 }
 
-const MilestoneCelebration: React.FC<MilestoneCelebrationProps> = ({ milestone, onComplete }) => {
+const MilestoneCelebration: React.FC<MilestoneCelebrationProps> = ({ milestone, onComplete, onClose }) => {
   const [note, setNote] = useState('');
   const [isSaving, setIsSaving] = useState(false);
+
+  const hasNote = note.trim().length > 0;
 
   const handleSave = () => {
     setIsSaving(true);
     if (!note.trim()) {
-        // Fallback to just celebrating if there's no note to save
         onComplete(milestone.id);
         return;
     }
@@ -25,18 +27,18 @@ const MilestoneCelebration: React.FC<MilestoneCelebrationProps> = ({ milestone, 
     onComplete(milestone.id, memory);
   };
   
-  const handleSkip = () => {
-    setIsSaving(true);
-    onComplete(milestone.id);
+  const handleClose = () => {
+    if (isSaving) return;
+    onClose();
   };
 
   return (
-    <div className="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-fadeIn">
+    <div className="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-fadeIn" role="dialog" aria-modal="true" aria-labelledby="milestone-title">
       <div className="bg-pure-white dark:bg-gray-800 rounded-xl shadow-lg w-full max-w-lg h-full max-h-[90vh] flex flex-col overflow-hidden">
         <div className="flex-grow overflow-y-auto p-6 space-y-4">
             <header className="text-center">
                 <h2 className="text-sm font-bold uppercase text-primary-blue tracking-widest">Milestone Reached!</h2>
-                <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mt-1">{milestone.name}</h1>
+                <h1 id="milestone-title" className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100 mt-1">{milestone.name}</h1>
                 <p className="text-gray-600 dark:text-gray-400 mt-2">{milestone.description}</p>
             </header>
 
@@ -64,11 +66,11 @@ const MilestoneCelebration: React.FC<MilestoneCelebrationProps> = ({ milestone, 
             </div>
         </div>
         <footer className="flex-shrink-0 p-4 bg-gray-50 dark:bg-gray-900 border-t dark:border-gray-700 grid grid-cols-2 gap-3">
-            <button onClick={handleSkip} disabled={isSaving} className="px-4 py-3 bg-gray-200 dark:bg-gray-600 font-bold rounded-lg disabled:opacity-50">
-                {isSaving ? 'Saving...' : 'Maybe Later'}
+            <button onClick={handleClose} disabled={isSaving} className="px-4 py-3 bg-gray-200 dark:bg-gray-600 font-bold rounded-lg disabled:opacity-50">
+                {isSaving ? '...' : 'Close'}
             </button>
-            <button onClick={handleSave} disabled={isSaving || !note.trim()} className="px-4 py-3 bg-primary-blue text-white font-bold rounded-lg disabled:opacity-50">
-                {isSaving ? 'Saving...' : 'Save & Celebrate'}
+            <button onClick={handleSave} disabled={isSaving} className="px-4 py-3 bg-primary-blue text-white font-bold rounded-lg disabled:opacity-50">
+                {isSaving ? 'Saving...' : (hasNote ? 'Save & Celebrate' : 'Celebrate')}
             </button>
         </footer>
       </div>

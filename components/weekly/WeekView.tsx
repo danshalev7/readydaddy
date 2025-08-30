@@ -36,37 +36,43 @@ const StatusBadge: React.FC<{ status: Status }> = ({ status }) => {
     return <span className={`px-2 py-1 text-xs font-medium rounded-full ${statusStyles[status]}`}>{status}</span>;
 };
 
-const BabyContent: React.FC<{ data: AggregatedWeekData }> = ({ data }) => (
-    <div className="space-y-4 animate-slideInUp">
-        <div className="bg-pure-white dark:bg-gray-800 p-6 rounded-xl shadow-md text-center">
-            <p className="text-lg font-semibold text-soft-purple">Baby is the size of a</p>
-            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 capitalize my-2">{data.weeklyCard?.baby_size_comparison || '...'}</h3>
-            <p className="text-gray-500 dark:text-gray-400">{data.weeklyCard?.baby_size_inches.toFixed(2)}" / {data.weeklyCard?.baby_weight_grams.toFixed(1)}g</p>
-        </div>
-        
-        <div className="bg-pure-white dark:bg-gray-800 p-4 rounded-xl shadow-md">
-            <h4 className="text-lg font-bold mb-3 px-2">Key Systems Development</h4>
-            <div className="space-y-2">
-                {data.fetalDevelopment.map((system: FetalDevelopment) => (
-                    <CollapsibleSection key={system.id} title={system.system_name}>
-                        <div className="space-y-3 text-sm">
-                            <p><StatusBadge status={system.status} /></p>
-                            <p><strong className="font-semibold">What's Happening:</strong> {system.this_week_summary}</p>
-                            <p><strong className="font-semibold">Why This Matters For Dad:</strong> {system.father_understanding_note}</p>
-                        </div>
-                    </CollapsibleSection>
-                ))}
+const BabyContent: React.FC<{ data: AggregatedWeekData }> = ({ data }) => {
+    const babySizeText = data.weeklyCard?.baby_size_comparison;
+
+    return (
+        <div className="space-y-4 animate-slideInUp">
+            <div className="bg-pure-white dark:bg-gray-800 p-6 rounded-xl shadow-md text-center">
+                <p className="text-lg font-semibold text-soft-purple">Baby is the size of a</p>
+                <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-gray-100 capitalize my-2">{babySizeText || '...'}</h3>
+                <p className="text-gray-500 dark:text-gray-400">
+                    {babySizeText ? `${data.weeklyCard?.baby_size_inches.toFixed(2)}" / ${data.weeklyCard?.baby_weight_grams.toFixed(1)}g` : 'The journey begins!'}
+                </p>
             </div>
-        </div>
-        
-        {data.weeklyCard?.did_you_know && (
-            <div className="bg-baby-blue dark:bg-info-blue/10 p-4 rounded-xl border-l-4 border-info-blue">
-                <h4 className="font-bold text-blue-800 dark:text-blue-200">Did You Know?</h4>
-                <p className="text-sm text-blue-700 dark:text-blue-300 mt-1">{data.weeklyCard.did_you_know}</p>
+            
+            <div className="bg-pure-white dark:bg-gray-800 p-4 rounded-xl shadow-md">
+                <h4 className="text-lg font-bold mb-3 px-2">Key Systems Development</h4>
+                <div className="space-y-2">
+                    {data.fetalDevelopment.map((system: FetalDevelopment) => (
+                        <CollapsibleSection key={system.id} title={system.system_name}>
+                            <div className="space-y-3 text-sm">
+                                <p><StatusBadge status={system.status} /></p>
+                                <p><strong className="font-semibold">What's Happening:</strong> {system.this_week_summary}</p>
+                                <p><strong className="font-semibold">Why This Matters For Dad:</strong> {system.father_understanding_note}</p>
+                            </div>
+                        </CollapsibleSection>
+                    ))}
+                </div>
             </div>
-        )}
-    </div>
-);
+            
+            {data.weeklyCard?.did_you_know && (
+                <div className="bg-baby-blue dark:bg-info-blue/10 p-4 rounded-xl border-l-4 border-info-blue">
+                    <h4 className="font-bold text-blue-800 dark:text-blue-200">Did You Know?</h4>
+                    <p className="text-sm text-blue-700 dark:text-blue-300 mt-1">{data.weeklyCard.did_you_know}</p>
+                </div>
+            )}
+        </div>
+    );
+};
 
 const PartnerContent: React.FC<{ data: AggregatedWeekData, partnerName: string }> = ({ data, partnerName }) => {
     if (!data.maternalChanges) return null;
@@ -248,8 +254,8 @@ const WeekView: React.FC<WeekViewProps> = ({ userProfile, currentWeek, onWeekCha
         {weekData && !weekData.hasData && !loading && <p className="text-center text-gray-500 pt-10">No specific information available for this week.</p>}
         {isFutureWeek && (
             <div className="absolute inset-0 bg-gray-900/60 backdrop-blur-sm flex flex-col items-center justify-center text-pure-white rounded-xl text-center p-4 z-20">
-                <h3 className="text-3xl font-bold">Coming Soon!</h3>
-                <p className="mt-2 text-lg">This content will unlock for you in {currentWeek - maxPregnancyWeek} week(s).</p>
+                <h3 className="text-lg sm:text-xl font-bold">Coming Soon!</h3>
+                <p className="mt-2 text-base sm:text-lg">This content will unlock for you in {currentWeek - maxPregnancyWeek} week(s).</p>
             </div>
         )}
       </div>

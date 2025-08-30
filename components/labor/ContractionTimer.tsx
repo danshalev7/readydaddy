@@ -56,10 +56,10 @@ const ChecklistModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
     const categories = ['Documents', 'For Partner', 'For You', 'For Baby'];
 
     return (
-        <div className="fixed inset-0 bg-black/60 z-40 flex items-center justify-center p-4 animate-fadeIn" onClick={onClose}>
+        <div className="fixed inset-0 bg-black/60 z-40 flex items-center justify-center p-4 animate-fadeIn" onClick={onClose} role="dialog" aria-modal="true" aria-labelledby="checklist-title">
             <div className="bg-pure-white dark:bg-gray-800 rounded-xl shadow-lg w-full max-w-md max-h-[80vh] overflow-y-auto" onClick={e => e.stopPropagation()}>
                 <div className="sticky top-0 bg-pure-white dark:bg-gray-800 p-4 border-b dark:border-gray-700 flex justify-between items-center">
-                    <h3 className="text-xl font-bold">Hospital Bag Checklist</h3>
+                    <h3 id="checklist-title" className="text-xl font-bold">Hospital Bag Checklist</h3>
                     <button onClick={onClose} className="font-bold text-2xl">&times;</button>
                 </div>
                 <div className="p-4 space-y-4">
@@ -209,10 +209,10 @@ const ContractionTimer: React.FC<{ userProfile: UserProfile }> = ({ userProfile 
       <h2 className="text-3xl font-bold text-center">Contraction Timer</h2>
       
       <div className="bg-pure-white dark:bg-gray-800 rounded-xl shadow-lg text-center p-6">
-        <div className="text-6xl font-mono font-bold mb-4">{formatTime(timer)}</div>
+        <div className="text-4xl sm:text-5xl lg:text-6xl font-mono font-bold mb-4">{formatTime(timer)}</div>
         <button
           onClick={handleToggle}
-          className={`w-full text-white text-3xl font-bold transition-transform duration-200 transform hover:scale-105 active:scale-95 flex items-center justify-center shadow-lg rounded-xl py-12 ${
+          className={`w-full text-white text-xl sm:text-2xl font-bold transition-transform duration-200 transform hover:scale-105 active:scale-95 flex items-center justify-center shadow-lg rounded-xl py-6 sm:py-8 ${
             isTiming ? 'bg-gradient-to-br from-warm-coral to-alert-red' : 'bg-gradient-to-br from-mint-green to-primary-blue'
           }`}
         >
@@ -248,11 +248,11 @@ const ContractionTimer: React.FC<{ userProfile: UserProfile }> = ({ userProfile 
                 <div className="grid grid-cols-2 gap-4 text-center mb-4 p-2">
                     <div>
                         <div className="text-sm text-gray-500 dark:text-gray-400">Avg. Duration</div>
-                        <div className="text-2xl font-bold">{formatTime(summary.avgDuration)}</div>
+                        <div className="text-lg sm:text-xl font-bold">{formatTime(summary.avgDuration)}</div>
                     </div>
                     <div>
                         <div className="text-sm text-gray-500 dark:text-gray-400">Avg. Frequency</div>
-                        <div className="text-2xl font-bold">{formatTime(summary.avgFrequency)}</div>
+                        <div className="text-lg sm:text-xl font-bold">{formatTime(summary.avgFrequency)}</div>
                     </div>
                 </div>
             )}
@@ -265,17 +265,19 @@ const ContractionTimer: React.FC<{ userProfile: UserProfile }> = ({ userProfile 
             </div>
             <div className="space-y-2 max-h-60 overflow-y-auto p-1">
               {contractions.map((c, i) => (
-                <div key={c.startTime} className="bg-gray-100 dark:bg-gray-700 p-3 rounded-lg grid grid-cols-3 items-center text-center">
-                  <div className="text-left">
-                    <p className="font-semibold">{new Date(c.startTime).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</p>
+                <div key={c.startTime} className="bg-gray-100 dark:bg-gray-700 p-3 rounded-lg flex justify-between items-center text-sm">
+                  <div className="font-semibold">
+                    <p>{new Date(c.startTime).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</p>
                   </div>
-                  <div>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">Duration</p>
-                    <p className="font-semibold">{formatTime(c.duration)}</p>
-                  </div>
-                   <div>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">Frequency</p>
-                    <p className="font-semibold">{getFrequency(i) ? formatTime(getFrequency(i)!) : '--:--'}</p>
+                  <div className="flex gap-4 text-center">
+                    <div>
+                      <p className="text-xs text-gray-500 dark:text-gray-400">Duration</p>
+                      <p className="font-semibold">{formatTime(c.duration)}</p>
+                    </div>
+                    <div>
+                      <p className="text-xs text-gray-500 dark:text-gray-400">Frequency</p>
+                      <p className="font-semibold">{getFrequency(i) ? formatTime(getFrequency(i)!) : '--:--'}</p>
+                    </div>
                   </div>
                 </div>
               ))}

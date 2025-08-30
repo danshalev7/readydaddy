@@ -27,7 +27,7 @@ const DailyMessages: React.FC<DailyMessagesProps> = ({ week, userProfile }) => {
           {messages.map((msg, index) => (
             <div key={index} className="bg-baby-blue dark:bg-gray-700 p-4 rounded-lg flex items-start space-x-3">
               <span className="text-xl text-warm-coral">❤️</span>
-              <p className="font-handwritten text-xl text-gray-800 dark:text-gray-200">{msg}</p>
+              <p className="font-handwritten text-lg sm:text-xl leading-tight text-gray-800 dark:text-gray-200">{msg}</p>
             </div>
           ))}
         </div>

@@ -87,7 +87,7 @@ const Profile: React.FC<ProfileProps> = ({ userProfile, userProgress, onProfileU
             
             <div className="bg-pure-white dark:bg-gray-800 p-6 rounded-xl shadow-lg text-center">
                 <h2 className="text-3xl font-bold">Level {level}</h2>
-                <p className="text-5xl font-bold text-primary-blue my-2">{points} <span className="text-2xl text-gray-500 dark:text-gray-400">Points</span></p>
+                <p className="text-2xl sm:text-3xl font-bold text-primary-blue my-2">{points} <span className="text-lg sm:text-xl text-gray-500 dark:text-gray-400">Points</span></p>
                 <div className="mt-4">
                     <div className="flex justify-between text-sm font-medium mb-1 text-gray-900 dark:text-gray-100">
                         <span>Progress to Level {level + 1}</span>
@@ -125,7 +125,11 @@ const Profile: React.FC<ProfileProps> = ({ userProfile, userProgress, onProfileU
                                 <h4 className="font-bold text-green-800 dark:text-green-200">{achievement.title}</h4>
                                 <p className="text-sm text-green-600 dark:text-green-300">{achievement.description}</p>
                             </div>
-                            <button onClick={() => handleShare(achievement)} className="p-2 text-gray-500 hover:text-primary-blue transition-colors active:scale-90">
+                            <button 
+                                onClick={() => handleShare(achievement)} 
+                                className="p-2 text-gray-500 hover:text-primary-blue transition-colors active:scale-90"
+                                aria-label={`Share achievement: ${achievement.title}`}
+                            >
                                 <ShareIcon className="w-5 h-5"/>
                             </button>
                         </div>

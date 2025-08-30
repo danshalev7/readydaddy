@@ -43,12 +43,12 @@ const Onboarding: React.FC<OnboardingProps> = ({ onComplete }) => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900 p-4 animate-fadeIn">
-      <div className="w-full max-w-lg bg-pure-white dark:bg-gray-800 rounded-xl shadow-lg p-8">
+      <div className="w-full max-w-lg bg-pure-white dark:bg-gray-800 rounded-xl shadow-lg p-6 md:p-8">
         <div className="text-center mb-8">
-            <h1 className="text-3xl md:text-4xl font-bold text-primary-blue dark:text-pure-white mb-2">Welcome to ReadyDaddy!</h1>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary-blue dark:text-pure-white mb-2">Welcome to ReadyDaddy!</h1>
             <p className="text-gray-600 dark:text-gray-300">Your co-pilot for the journey to fatherhood.</p>
         </div>
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
           <div>
             <label htmlFor="lmpDate" className="block text-sm font-bold text-gray-700 dark:text-gray-200 mb-2">
               First, what was the first day of the last menstrual period (LMP)?

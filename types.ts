@@ -67,58 +67,10 @@ export interface DailyMessageWeek {
   daily_messages: string[];
 }
 
-// Types for Gemini Service response
-export interface BabySize {
-    inches: number;
-    grams: number;
-    comparisonObject: string;
-}
-
-export interface FetalSystem {
-    name: string;
-    status: 'Forming' | 'Developing' | 'Functional';
-    fatherFriendlyExplanation: string;
-    clinicalSignificance: string;
-    whyThisMatters: string;
-}
-
-export interface MaternalChange {
-    symptom: string;
-    timeline: string;
-    fatherActionItem: string;
-    isWarningSign: boolean;
-}
-
-export interface MedicalGuidance {
-    topic: string;
-    simplifiedExplanation: string;
-    detailedExplanation: string;
-    fatherAdvocacyScript: string[];
-}
-
-export interface PaternalGuidance {
-    paternalChanges: string;
-    bondingOpportunity: string;
-    actionableTasks: string[];
-}
-
-export interface WeekData {
-    week: number;
-    trimester: number;
-    babySize: BabySize;
-    fetalSystems: FetalSystem[];
-    didYouKnowFact: string;
-    maternalChanges: MaternalChange[];
-    medicalGuidance: MedicalGuidance[];
-    warningSigns: string[];
-    paternalGuidance: PaternalGuidance;
-    error?: string;
-}
-
-// Types for services/pregnancyDataService.ts (likely legacy)
+// Types for services/pregnancyDataService.ts, matching the JSON data structures
 export interface FetalDevelopment {
-  id: string;
-  week: string;
+  id: number;
+  week: number | string; // JSON data uses number, but some legacy might use string
   system_name: string;
   status: 'Forming' | 'Developing' | 'Functional';
   is_critical_window: boolean;
@@ -128,7 +80,7 @@ export interface FetalDevelopment {
 
 export interface MaternalChanges {
   week: string;
-  symptoms: string[];
+  symptoms: { [key: string]: boolean | string };
   summary: string;
   suggested_action: string;
 }
@@ -141,7 +93,7 @@ export interface MedicalExplanation {
   related_warning_signs?: {
     warning_signs: string[];
   };
-  advocacy_script?: string;
+  advocacy_script?: string | null;
 }
 
 export interface WeeklyCard {
